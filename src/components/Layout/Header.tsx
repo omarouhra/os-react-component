@@ -19,7 +19,9 @@ function Header() {
       <nav className='flex items-center justify-between'>
         <Link href='/'>
           <a>
-            <OsIcon />
+            <div className=' animate-[spin_20s_infinite]  hover:scale-105 hover:animate-none'>
+              <OsIcon className='transitions transitions stroke-black  dark:stroke-white' />
+            </div>
           </a>
         </Link>
 
