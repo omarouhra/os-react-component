@@ -73,7 +73,7 @@ const Home = (components: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const components = allComponents.map(component =>
+  const components = allComponents.map((component) =>
     pick(component, ["title", "description", "image", "date", "tags"])
   );
 
