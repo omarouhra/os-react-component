@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className='w-full py-12 text-center font-bold '> Created in 🇲🇦</div>
+    <div className='w-full py-20 text-center font-bold '> Created in 🇲🇦</div>
   );
 }
 

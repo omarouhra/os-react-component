@@ -60,7 +60,7 @@ const Home = (components: Props) => {
         </button>
       </section>
 
-      <section className='grid h-[60vh] w-full grid-cols-3 gap-10 rounded-xl   py-6'>
+      <section className='grid w-full grid-cols-1 gap-10 rounded-xl py-6 md:h-[60vh]   md:grid-cols-3'>
         <LoadingComponent />
         <LoadingComponent />
         <LoadingComponent />
