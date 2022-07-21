@@ -28,17 +28,17 @@ const Home = (components: Props) => {
       </section>
       <section className=' flex  w-full max-w-3xl flex-col space-y-6 py-12 md:flex-row md:justify-between md:space-y-0'>
         <TechnologiesCard
-          technology='Next.js'
+          technology='Next.js: '
           content='  with a bunch of complex media queries in your CSS sucks, so Tailwind lets you build responsive designs right in your HTML instead.'
           gradient='from-[#D8B4FE] to-[#818CF8]'
         />
         <TechnologiesCard
-          technology='TailwindCss'
+          technology='TailwindCss: '
           content='  with a bunch of complex media queries in your CSS sucks, so Tailwind lets you build responsive designs right in your HTML instead.'
           gradient='from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]'
         />
         <TechnologiesCard
-          technology='Vercel'
+          technology='Vercel: '
           content='  with a bunch of complex media queries in your CSS sucks, so Tailwind lets you build responsive designs right in your HTML instead.'
           gradient='from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]'
         />
