@@ -23,7 +23,7 @@ function Components() {
       </section>
 
       <section className='py-12'>
-        <div className='grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-12'>
+        <div className='grid grid-cols-2 gap-12 md:grid-cols-4'>
           {FILTERS.map((filter, index) => (
             <button
               key={index}
