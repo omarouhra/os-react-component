@@ -1,5 +1,4 @@
 import HeroTitle from "@/components/HeroTitle";
-import index from "@/components/Layout";
 import LoadingComponent from "@/components/LoadingComponent";
 import React, { useState } from "react";
 
@@ -12,6 +11,7 @@ function Components() {
     { label: "Navbars" },
     { label: "Carousels" },
   ];
+
   return (
     <div>
       <section className='py-12 '>

@@ -3,6 +3,7 @@ import React from "react";
 type ComponentType = {
   content?: string;
 };
+
 function LoadingComponent({ content }: ComponentType) {
   return (
     <div className='transitions relative h-[300px] space-y-5 overflow-hidden rounded-2xl bg-gradient-to-r from-[#3B82F6] to-[#9333EA]  p-4 opacity-80 shadow-2xl shadow-black/5 before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:border-t before:border-rose-100/10 before:bg-gradient-to-r before:from-transparent before:via-rose-100/10 before:to-transparent hover:opacity-100'>
