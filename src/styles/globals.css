@@ -26,3 +26,6 @@ img {
 .transitions {
   @apply transition duration-500;
 }
+.short-transitions {
+  @apply transition duration-100;
+}
