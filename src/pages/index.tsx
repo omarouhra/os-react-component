@@ -18,7 +18,7 @@ const Home = (components: Props) => {
         <HeroTitle />
         <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>
           JS/TS, Responsive, Semantique HTML, Accessibilty(A11y) No packages,
-          Dark/Light mode{" "}
+          Dark/Light mode
         </p>
       </section>
       <section className=' flex  w-full max-w-3xl flex-col space-y-6 py-12 md:flex-row md:justify-between md:space-y-0'>
