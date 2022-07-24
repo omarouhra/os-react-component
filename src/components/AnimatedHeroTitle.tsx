@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 
 function AnimatedHeroTitle() {
   const [title, setTitle] = useState(false);
-  const router = useRouter();
-  const slug = router.pathname;
 
   useEffect(() => {
     setTimeout(() => {
