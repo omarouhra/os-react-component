@@ -9,6 +9,12 @@ body {
   user-select: none;
 }
 
+header,
+main,
+footer {
+  @apply mx-auto max-w-4xl px-5 lg:px-0;
+}
+
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;

@@ -13,7 +13,7 @@ type Props = {
 
 const Home = (components: Props) => {
   return (
-    <section>
+    <>
       <section className='py-12 '>
         <HeroTitle />
         <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>
@@ -21,6 +21,7 @@ const Home = (components: Props) => {
           Dark/Light mode
         </p>
       </section>
+
       <section className=' flex  w-full max-w-3xl flex-col space-y-6 py-12 md:flex-row md:justify-between md:space-y-0'>
         <TechnologiesCard
           technology='Next.js: '
@@ -66,7 +67,7 @@ const Home = (components: Props) => {
         <LoadingComponent />
         <LoadingComponent />
       </section>
-    </section>
+    </>
   );
 };
 

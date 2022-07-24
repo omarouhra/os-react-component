@@ -15,8 +15,8 @@ function Header() {
   if (!mounted) return null;
 
   return (
-    <div className='py-8'>
-      <nav className='flex items-center justify-between'>
+    <header className='py-8'>
+      <div className='flex items-center justify-between'>
         <Link href='/'>
           <a>
             <div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
@@ -34,8 +34,8 @@ function Header() {
         >
           {theme === "light" ? <MoonIcon /> : <SunIcon />}
         </button>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 }
 

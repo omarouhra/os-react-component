@@ -13,7 +13,6 @@ function TechnologyCard({ technology, content, gradient }: cardType) {
     >
       <div className='transitions flex h-full items-center justify-center rounded-md bg-white py-4 px-6 dark:bg-gray-900 md:items-start'>
         <p className='font-light text-gray-600 dark:text-gray-300'>
-          {" "}
           <span className='font-bold text-black dark:text-white '>
             {technology}
           </span>{" "}
