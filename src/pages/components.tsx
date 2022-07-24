@@ -3,18 +3,18 @@ import LoadingComponent from "@/components/LoadingComponent";
 import React, { useState } from "react";
 
 function Components() {
-  const [isActive, setIsActive] = useState("Buttons");
+  const [isActive, setIsActive] = useState("Forms");
 
   const FILTERS = [
-    { label: "Buttons" },
-    { label: "Texts" },
-    { label: "Navbars" },
+    { label: "Forms" },
+    { label: "Modals" },
+    { label: "Headers" },
     { label: "Carousels" },
   ];
 
   return (
     <div>
-      <section className='py-12 '>
+      <section className='py-12'>
         <HeroTitle />
         <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>
           We worked on cool and well optimized components that will definetly
@@ -35,7 +35,7 @@ function Components() {
               <div
                 className={
                   isActive === filter.label
-                    ? "transitions border-b border-blue-600 pb-3  text-start   text-blue-500 dark:text-blue-400  md:text-lg"
+                    ? "transitions border-b border-blue-600 pb-3 text-start text-blue-500 dark:text-blue-400  md:text-lg"
                     : "transitions border-b pb-3 text-start text-gray-400 hover:border-gray-500 hover:text-gray-500 dark:text-gray-400 dark:hover:border-gray-100 dark:hover:text-gray-100 md:text-lg"
                 }
               >
@@ -46,7 +46,7 @@ function Components() {
         </div>
       </section>
 
-      <section className='grid w-full grid-cols-1 gap-10 rounded-xl py-6  md:grid-cols-3'>
+      <section className='grid w-full grid-cols-1 gap-10 rounded-xl py-6 md:grid-cols-3'>
         <LoadingComponent content={isActive} />
         <LoadingComponent content={isActive} />
         <LoadingComponent content={isActive} />
