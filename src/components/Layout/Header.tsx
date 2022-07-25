@@ -19,8 +19,8 @@ function Header() {
       <div className='flex items-center justify-between'>
         <Link href='/'>
           <a>
-            <div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
-              <OsIcon className='transitions transitions stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
+            <div className='short-transitions group hover:animate-[spin_2s_infinite]'>
+              <OsIcon className=' stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
             </div>
           </a>
         </Link>
@@ -30,7 +30,7 @@ function Header() {
             setTheme(resolvedTheme === "light" ? "dark" : "light");
           }}
           type='button'
-          className='transitions rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-700'
+          className='rounded-md p-2 hover:bg-gray-200 dark:hover:bg-gray-700'
         >
           {theme === "light" ? <MoonIcon /> : <SunIcon />}
         </button>

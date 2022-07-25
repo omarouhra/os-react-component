@@ -3,13 +3,13 @@ import ComponentPreview from "@/components/ComponentPreview";
 import { useRouter } from "next/router";
 import React from "react";
 
-function Pereview() {
+function Preview({ slug }: any) {
   return (
     <div>
       <section className='py-12'>
-        <AnimatedHeroTitle />
+        <AnimatedHeroTitle slug={slug} />
       </section>
-      <section className='py-12 space-y-12'>
+      <section className='space-y-12 py-12'>
         <ComponentPreview />
         <ComponentPreview />
         <ComponentPreview />
@@ -18,4 +18,23 @@ function Pereview() {
   );
 }
 
-export default Pereview;
+export default Preview;
+
+export const getStaticProps = async ({ params }: any) => {
+  // @ts-ignore
+  const { slug } = params;
+
+  return { props: { slug } };
+};
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: "forms" } },
+      { params: { slug: "modals" } },
+      { params: { slug: "headers" } },
+      { params: { slug: "carousels" } },
+    ],
+    fallback: false,
+  };
+}
