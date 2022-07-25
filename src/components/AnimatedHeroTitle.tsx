@@ -7,7 +7,7 @@ function AnimatedHeroTitle() {
   useEffect(() => {
     setTimeout(() => {
       setTitle(true);
-    }, 2000);
+    }, 1000);
   }, [title]);
 
   return (
