@@ -50,7 +50,7 @@ function ComponentPreview({
           {preview}
         </div>
       ) : (
-        <div className='flex max-h-[500px] items-center justify-center overflow-scroll rounded-md bg-gray-700'>
+        <div className=' max-h-[500px] p-12 overflow-scroll rounded-md bg-gray-700'>
           {children}
         </div>
       )}
