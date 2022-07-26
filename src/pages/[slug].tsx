@@ -1,6 +1,5 @@
 import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import ComponentPreview from "@/components/ComponentPreview";
-import { useRouter } from "next/router";
 import React from "react";
 
 function Preview({ slug }: any) {

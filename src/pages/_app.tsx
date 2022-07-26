@@ -1,15 +1,19 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 
-import "@/styles/globals.css";
+import { LangProvider } from "@/context/lang-context";
 import Layout from "@/components/Layout";
+
+import "@/styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider defaultTheme='system' attribute='class'>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <LangProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </LangProvider>
     </ThemeProvider>
   );
 }
