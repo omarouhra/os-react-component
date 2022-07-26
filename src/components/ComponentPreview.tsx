@@ -46,11 +46,11 @@ function ComponentPreview({
       </div>
 
       {activeTab === "preview" ? (
-        <div className=' h-[500px] rounded-md bg-gray-200 px-5 pt-5 dark:bg-gray-700 '>
+        <div className=' h-[500px] rounded-md bg-gray-200 px-5 pt-5  dark:bg-gray-700 '>
           {preview}
         </div>
       ) : (
-        <div className=' max-h-[500px] overflow-scroll rounded-md bg-gray-700 p-12'>
+        <div className=' max-h-[500px] overflow-scroll rounded-md bg-gray-700 p-12 text-white'>
           {children}
         </div>
       )}
