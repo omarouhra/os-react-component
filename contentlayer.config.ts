@@ -3,6 +3,7 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 export const Component = defineDocumentType(() => ({
   name: "Component",
   filePathPattern: "components/*.mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     description: { type: "string", required: true },

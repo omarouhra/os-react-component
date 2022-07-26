@@ -1,39 +1,43 @@
+import React from "react";
 import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import ComponentPreview from "@/components/ComponentPreview";
-import React from "react";
+import { allComponents, Component } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
-function Preview({ slug }: any) {
+function Preview({ component }: { component: Component }) {
+  const Component = useMDXComponent(component?.body.code);
+
   return (
     <div>
       <section className='py-12'>
-        <AnimatedHeroTitle slug={slug} />
+        <AnimatedHeroTitle slug={component?.slug} />
       </section>
       <section className='space-y-12 py-12'>
         <ComponentPreview />
         <ComponentPreview />
         <ComponentPreview />
       </section>
+
+      <Component />
     </div>
   );
 }
 
-export default Preview;
-
 export const getStaticProps = async ({ params }: any) => {
-  // @ts-ignore
-  const { slug } = params;
+  const component = allComponents.find(
+    (component) => component.slug === params.slug
+  );
 
-  return { props: { slug } };
+  return { props: { component } };
 };
 
 export async function getStaticPaths() {
   return {
-    paths: [
-      { params: { slug: "forms" } },
-      { params: { slug: "modals" } },
-      { params: { slug: "headers" } },
-      { params: { slug: "carousels" } },
-    ],
+    paths: allComponents.map((component) => ({
+      params: { slug: component.slug },
+    })),
     fallback: false,
   };
 }
+
+export default Preview;
