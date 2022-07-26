@@ -6,9 +6,11 @@ import PreviewIcon from "./icons/PreviewIcon";
 function ComponentPreview({
   preview,
   children,
+  title,
 }: {
   preview?: JSX.Element;
   children?: React.ReactNode;
+  title: string;
 }) {
   const [activeTab, setActivePanel] = useState("preview");
 
@@ -16,7 +18,7 @@ function ComponentPreview({
     <section className=''>
       <div className='flex items-center justify-between py-4'>
         <p className='text-xl font-semibold text-gray-500 dark:text-white'>
-          Simple Minimal Form
+          Simple Minimal {title}
         </p>
         <div className='flex items-center justify-center space-x-6'>
           <div className='flex '>
