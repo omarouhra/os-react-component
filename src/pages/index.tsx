@@ -60,12 +60,9 @@ const Home = (components: Props) => {
       </section>
 
       <section className='grid w-full grid-cols-1 gap-10 rounded-xl py-6  md:grid-cols-3'>
-        <LoadingComponent />
-        <LoadingComponent />
-        <LoadingComponent />
-        <LoadingComponent />
-        <LoadingComponent />
-        <LoadingComponent />
+        {components.components.map((component) => (
+          <LoadingComponent {...component} key={component.title} />
+        ))}
       </section>
     </>
   );
