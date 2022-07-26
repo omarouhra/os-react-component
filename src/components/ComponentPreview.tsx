@@ -3,8 +3,15 @@ import CodeIcon from "./icons/CodeIcon";
 import CopyIcon from "./icons/CopyIcon";
 import PreviewIcon from "./icons/PreviewIcon";
 
-function ComponentPreview() {
+function ComponentPreview({
+  image,
+  children,
+}: {
+  image?: string;
+  children?: React.ReactNode;
+}) {
   const [activeTab, setActivePanel] = useState("preview");
+
   return (
     <section className=''>
       <div className='flex items-center justify-between py-4'>
@@ -37,13 +44,12 @@ function ComponentPreview() {
       </div>
 
       {activeTab === "preview" ? (
-        <div className='flex h-[500px]  items-center justify-center rounded-md bg-gradient-to-r from-blue-700 to-cyan-300 '>
-          {" "}
+        <div className='flex h-[500px] items-center justify-center rounded-md bg-gradient-to-r from-blue-700 to-cyan-300 '>
           Preview
         </div>
       ) : (
-        <div className='flex  h-[500px] items-center justify-center rounded-md bg-gray-700'>
-          Code
+        <div className='flex max-h-[500px] items-center justify-center overflow-scroll rounded-md bg-gray-700'>
+          {children}
         </div>
       )}
     </section>

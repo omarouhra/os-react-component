@@ -3,6 +3,7 @@ import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import ComponentPreview from "@/components/ComponentPreview";
 import { allComponents, Component } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import MDXComponents from "@/components/MDXComponents";
 
 function Preview({ component }: { component: Component }) {
   const Component = useMDXComponent(component?.body.code);
@@ -12,13 +13,13 @@ function Preview({ component }: { component: Component }) {
       <section className='py-12'>
         <AnimatedHeroTitle slug={component?.slug} />
       </section>
-      <section className='space-y-12 py-12'>
+      {/* <section className='space-y-12 py-12'>
         <ComponentPreview />
         <ComponentPreview />
         <ComponentPreview />
-      </section>
+      </section> */}
 
-      <Component />
+      <Component components={{ ...MDXComponents }} />
     </div>
   );
 }

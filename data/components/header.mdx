@@ -6,6 +6,7 @@ tags: ["header", "component"]
 image: /ui/Header/header_component.png
 ---
 
+<ComponentPreview>
 ```tsx
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -13,38 +14,39 @@ import Link from "next/link";
 import OsIcon from "@/components/icons/OsIcon";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, []);
+useEffect(() => {
+return () => {
+document.body.style.overflow = "";
+};
+}, []);
 
-  const toggleMenu = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = "";
-    } else {
-      setIsMenuOpen(true);
-      document.body.style.overflow = "hidden";
-    }
-  };
+const toggleMenu = () => {
+if (isMenuOpen) {
+setIsMenuOpen(false);
+document.body.style.overflow = "";
+} else {
+setIsMenuOpen(true);
+document.body.style.overflow = "hidden";
+}
+};
 
-  return (
-    <header className='talent-container'>
-      <div className='flex h-[70px] items-center justify-between border-b'>
-        <div>
-          <h1 className='text-2xl font-semibold'>
-            <Link href='/'>
-              <a>
-                <div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
-                  <OsIcon className='transitions transitions stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
-                </div>
-              </a>
-            </Link>
-          </h1>
-        </div>
+return (
+
+<header className='talent-container'>
+<div className='flex h-[70px] items-center justify-between border-b'>
+<div>
+<h1 className='text-2xl font-semibold'>
+<Link href='/'>
+<a>
+<div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
+<OsIcon className='transitions transitions stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
+</div>
+</a>
+</Link>
+</h1>
+</div>
 
         <nav
           className={`${
@@ -117,8 +119,10 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
+
+);
 };
 
 export default Header;
 ```
+</ComponentPreview>
