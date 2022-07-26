@@ -6,10 +6,10 @@ function Components() {
   const [isActive, setIsActive] = useState("Forms");
 
   const FILTERS = [
-    { label: "Forms" },
-    { label: "Modals" },
-    { label: "Headers" },
-    { label: "Carousels" },
+    { label: "Form" },
+    { label: "Modal" },
+    { label: "Header" },
+    { label: "Carousel" },
   ];
 
   return (
