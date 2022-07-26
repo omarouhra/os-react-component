@@ -4,10 +4,10 @@ import CopyIcon from "./icons/CopyIcon";
 import PreviewIcon from "./icons/PreviewIcon";
 
 function ComponentPreview({
-  image,
+  preview,
   children,
 }: {
-  image?: string;
+  preview?: JSX.Element;
   children?: React.ReactNode;
 }) {
   const [activeTab, setActivePanel] = useState("preview");
@@ -45,7 +45,7 @@ function ComponentPreview({
 
       {activeTab === "preview" ? (
         <div className='flex h-[500px] items-center justify-center rounded-md bg-gradient-to-r from-blue-700 to-cyan-300 '>
-          Preview
+          {preview}
         </div>
       ) : (
         <div className='flex max-h-[500px] items-center justify-center overflow-scroll rounded-md bg-gray-700'>
