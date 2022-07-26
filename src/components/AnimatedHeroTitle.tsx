@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-function AnimatedHeroTitle() {
+function AnimatedHeroTitle({ slug }: any) {
   const [title, setTitle] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setTitle(true);
-    }, 1000);
+    }, 700);
   }, [title]);
 
   return (
@@ -15,7 +15,7 @@ function AnimatedHeroTitle() {
       Ready to use React{" "}
       <div className='h-12  w-min overflow-hidden '>
         <div
-          className={`overflow-hidde tansitions flex h-8 w-min md:h-12 ${
+          className={`overflow-hidde tansitions flex h-8 w-min md:h-12 ease-out ${
             title
               ? "-translate-y-6 md:-translate-y-12"
               : "translate-y-8 md:translate-y-12"
@@ -24,8 +24,8 @@ function AnimatedHeroTitle() {
           <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-3xl font-extrabold text-transparent lg:text-5xl'>
             Components
           </span>{" "}
-          <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-3xl font-extrabold text-transparent lg:text-5xl'>
-            Forms
+          <span className=' bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-3xl font-extrabold capitalize text-transparent lg:text-5xl'>
+            {slug}
           </span>{" "}
         </div>
       </div>
