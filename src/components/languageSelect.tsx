@@ -25,14 +25,13 @@ const LanguageSelect = () => {
 
   return (
     <select
-      className='short-transitions rounded-r-lg py-3 px-6'
+      className='short-transitions rounded-md bg-transparent p-2 text-sm text-gray-500 outline-blue-500 dark:text-gray-200 dark:outline-blue-300'
       id='languageSelect'
-      // defaultValue={currentLanguage}
       value={currentLanguage}
       onChange={handleChange}
     >
-      <option value='javascript'>JavaScript</option>
-      <option value='typescript'>TypeScript</option>
+      <option value='javascript'>JS</option>
+      <option value='typescript'>TS</option>
     </select>
   );
 };

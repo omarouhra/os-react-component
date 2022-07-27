@@ -19,12 +19,12 @@ function ComponentPreview({
 
   return (
     <section className=''>
-      <div className='flex items-center justify-between py-2'>
-        <p className='text-xl font-semibold text-gray-500 dark:text-white'>
+      <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0'>
+        <p className='text-lg font-semibold text-gray-700 dark:text-white'>
           Simple Minimal {title}
         </p>
-        <div className='flex items-center justify-center space-x-3'>
-          <div className='flex '>
+        <div className='flex w-full items-center justify-between space-x-3 md:w-auto md:justify-end'>
+          <div className='flex'>
             <button
               className={`short-transitions flex items-center space-x-2 rounded-lg  px-3 ${
                 activeTab === "preview" &&
@@ -45,12 +45,15 @@ function ComponentPreview({
               <CodeIcon />
               <span className='text-sm'>Code</span>
             </button>
-            <LanguageSelect />
           </div>
-          <div className='h-10 w-0.5 bg-gray-400'></div>
-          <button className='short-transitions rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600'>
-            <CopyIcon />
-          </button>
+          <div className='flex items-center space-x-2'>
+            <div className='hidden h-8 w-0.5 bg-gray-400/20 md:inline-block'></div>
+
+            <LanguageSelect />
+            <button className='short-transitions rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600'>
+              <CopyIcon />
+            </button>
+          </div>
         </div>
       </div>
       <div>
