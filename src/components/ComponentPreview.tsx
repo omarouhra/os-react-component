@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CodeIcon from "./icons/CodeIcon";
 import CopyIcon from "./icons/CopyIcon";
 import PreviewIcon from "./icons/PreviewIcon";
+import LanguageSelect from "./languageSelect";
 
 function ComponentPreview({
   preview,
@@ -38,6 +39,7 @@ function ComponentPreview({
             >
               <CodeIcon />
             </button>
+            <LanguageSelect />
           </div>
           <button className='short-transitions rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600'>
             <CopyIcon />
