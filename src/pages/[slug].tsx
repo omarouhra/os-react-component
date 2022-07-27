@@ -4,6 +4,7 @@ import { allComponents, Component } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/MDXComponents";
 import { useLangContext } from "@/context/lang-context";
+import Link from "next/link";
 
 function Preview({ component }: { component: Component }) {
   const Component = useMDXComponent(component?.body.code);
@@ -31,6 +32,21 @@ function Preview({ component }: { component: Component }) {
           Toggle me
         </span>
       </label> */}
+      {/* <Link href={"/"}>
+        <a className='short-transitions border-black hover:border-b dark:border-white'>
+          Home/{" "}
+        </a>
+      </Link>
+      <Link href={"/"}>
+        <a className='short-transitions border-black hover:border-b dark:border-white'>
+          Components/{" "}
+        </a>
+      </Link>
+      <Link href={"/"}>
+        <a className='short-transitions border-black capitalize hover:border-b dark:border-white'>
+          {component?.slug}{" "}
+        </a>
+      </Link> */}
 
       <section className='py-12'>
         <AnimatedHeroTitle slug={component?.slug} />

@@ -5,12 +5,7 @@ import React, { useState } from "react";
 function Components() {
   const [isActive, setIsActive] = useState("Forms");
 
-  const FILTERS = [
-    { label: "Form" },
-    { label: "Modal" },
-    { label: "Header" },
-    { label: "Carousel" },
-  ];
+  const FILTERS = ["header", "form", "modal", "carousel"];
 
   return (
     <div>
@@ -22,7 +17,7 @@ function Components() {
         </p>
       </section>
 
-      <section className='py-12'>
+      {/* <section className='py-12'>
         <div className='grid grid-cols-2 gap-12 md:max-w-2xl md:grid-cols-4'>
           {FILTERS.map((filter, index) => (
             <button
@@ -44,15 +39,12 @@ function Components() {
             </button>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className='grid w-full grid-cols-1 gap-10 rounded-xl py-6 md:grid-cols-3'>
-        <Component content={isActive} link={isActive} />
-        <Component content={isActive} link={isActive} />
-        <Component content={isActive} link={isActive} />
-        <Component content={isActive} link={isActive} />
-        <Component content={isActive} link={isActive} />
-        <Component content={isActive} link={isActive} />
+        {FILTERS.map((label, index) => (
+          <Component key={index} content={label} link={label} />
+        ))}
       </section>
     </div>
   );
