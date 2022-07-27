@@ -31,7 +31,6 @@ const LanguageSelect = () => {
       value={currentLanguage}
       onChange={handleChange}
     >
-      <option value=''></option>
       <option value='javascript'>JavaScript</option>
       <option value='typescript'>TypeScript</option>
     </select>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 import OsIcon from "@/components/icons/OsIcon";
 
@@ -27,13 +26,9 @@ const Header = () => {
       <div className='flex h-[70px] items-center justify-between border-b'>
         <div>
           <h1 className='text-2xl font-semibold'>
-            <Link href='/'>
-              <a>
-                <div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
-                  <OsIcon className='transitions transitions stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
-                </div>
-              </a>
-            </Link>
+            <div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
+              <OsIcon className='transitions transitions stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
+            </div>
           </h1>
         </div>
 
@@ -45,23 +40,11 @@ const Header = () => {
           } md:static md:flex md:h-auto md:w-auto md:space-x-4 md:bg-transparent md:px-0`}
         >
           <ul className='items-left flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-4'>
-            <li>
-              <Link href='/'>
-                <a>Home</a>
-              </Link>
-            </li>
+            <li>Home</li>
 
-            <li>
-              <Link href='/about'>
-                <a>About</a>
-              </Link>
-            </li>
+            <li>About</li>
 
-            <li>
-              <Link href='/contact'>
-                <a>Contact</a>
-              </Link>
-            </li>
+            <li>Contact</li>
           </ul>
         </nav>
 
