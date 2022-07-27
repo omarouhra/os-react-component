@@ -15,7 +15,7 @@ function Preview({ component }: { component: Component }) {
 
   return (
     <div>
-      <label
+      {/* <label
         htmlFor='default-toggle'
         className='relative inline-flex cursor-pointer items-center'
       >
@@ -30,16 +30,11 @@ function Preview({ component }: { component: Component }) {
         <span className='ml-3 text-sm font-medium text-gray-900 dark:text-gray-300'>
           Toggle me
         </span>
-      </label>
+      </label> */}
 
       <section className='py-12'>
         <AnimatedHeroTitle slug={component?.slug} />
       </section>
-      {/* <section className='space-y-12 py-12'>
-        <ComponentPreview />
-        <ComponentPreview />
-        <ComponentPreview />
-      </section> */}
 
       <Component components={{ ...MDXComponents }} />
     </div>
