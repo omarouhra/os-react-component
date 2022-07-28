@@ -1,24 +1,13 @@
-import { useEffect, useState } from "react";
+import { useLanguageContext } from "@/context/lang-context";
 
 const LanguageSelect = () => {
-  const [currentLanguage, setCurrentLanguage] = useState<
-    "javascript" | "typescript"
-  >();
-
-  useEffect(() => {
-    const language = localStorage.getItem("language");
-
-    language === "javascript" || language === "typescript"
-      ? setCurrentLanguage(language)
-      : // if language is not "javascript" or "typescript", Set language to "typescript"
-        setCurrentLanguage("typescript");
-  }, [currentLanguage]);
+  const { language, setLanguage } = useLanguageContext();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.preventDefault();
 
     // @ts-ignore
-    setCurrentLanguage(e.target.value);
+    setLanguage(e.target.value);
 
     localStorage.setItem("language", e.target.value);
   };
@@ -27,7 +16,7 @@ const LanguageSelect = () => {
     <select
       className='short-transitions rounded-md bg-transparent p-2 text-sm text-gray-500 outline-blue-500 dark:text-gray-200 dark:outline-blue-300'
       id='languageSelect'
-      value={currentLanguage}
+      value={language}
       onChange={handleChange}
     >
       <option value='javascript'>JS</option>

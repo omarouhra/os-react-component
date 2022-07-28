@@ -1,20 +1,30 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
-interface LangContextInterface {
-  lang: "JavaScript" | "TypeScript";
-  setLang: React.Dispatch<React.SetStateAction<"JavaScript" | "TypeScript">>;
+type Languages = "javascript" | "typescript";
+
+interface LanguageContextInterface {
+  language: Languages;
+  setLanguage: React.Dispatch<React.SetStateAction<Languages>>;
 }
 
-const LangContext = createContext({} as LangContextInterface);
+const LanguageContext = createContext({} as LanguageContextInterface);
 
-export const useLangContext = () => useContext(LangContext);
+export const useLanguageContext = () => useContext(LanguageContext);
 
 export const LangProvider = ({ children }: { children: React.ReactNode }) => {
-  const [lang, setLang] = useState<"JavaScript" | "TypeScript">("TypeScript");
+  const [language, setLanguage] = useState<Languages>("typescript");
+
+  useEffect(() => {
+    const language = localStorage.getItem("language");
+
+    language === "javascript" || language === "typescript"
+      ? setLanguage(language)
+      : setLanguage("typescript");
+  }, [language]);
 
   return (
-    <LangContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
-    </LangContext.Provider>
+    </LanguageContext.Provider>
   );
 };
