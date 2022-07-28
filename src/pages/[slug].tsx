@@ -12,10 +12,7 @@ function Preview({ component }: { component: Component }) {
   const Component = useMDXComponent(component?.body.code);
   const Code = useMDXComponent(component?.[codeLanguage].body.code);
 
-  const fileName = `${component.slug}.${codeLanguage
-    .toLowerCase()
-    .slice(0, 2)}`;
-
+  const fileTyle = codeLanguage.toLowerCase().slice(0, 2);
   return (
     <div className='animate-fade-in-up'>
       <section className='py-12'>
@@ -23,7 +20,9 @@ function Preview({ component }: { component: Component }) {
       </section>
 
       <ComponentPreview
-        fileName={fileName}
+        fileName={component.slug}
+        //@ts-ignore
+        fileType={fileTyle}
         title={component.title}
         preview={<Component components={{ ...MDXComponents }} />}
       >

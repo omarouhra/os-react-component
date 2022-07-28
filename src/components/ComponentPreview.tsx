@@ -9,14 +9,16 @@ function ComponentPreview({
   children,
   title,
   fileName,
+  fileType,
 }: {
   preview?: JSX.Element;
   children?: React.ReactNode;
   title: string;
   fileName: string;
+  fileType: "js" | "ts";
 }) {
   const [activeTab, setActivePanel] = useState("preview");
-
+  console.log("🔥", fileType);
   return (
     <section className=''>
       <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0'>
@@ -62,12 +64,20 @@ function ComponentPreview({
       <div>
         <div className='flex rounded-t-lg bg-gray-200  dark:bg-gray-700'>
           <div className='flex items-center space-x-1 p-4'>
-            <span className='h-3 w-3 rounded-full bg-red-400 dark:bg-slate-600'></span>
-            <span className='h-3 w-3 rounded-full bg-amber-400 dark:bg-slate-600'></span>
-            <span className='h-3 w-3 rounded-full bg-green-400 dark:bg-slate-600'></span>
+            <span className='h-3 w-3 rounded-full bg-red-400 '></span>
+            <span className='h-3 w-3 rounded-full bg-amber-400 '></span>
+            <span className='h-3 w-3 rounded-full bg-green-400 '></span>
           </div>
-          <div className='flex min-h-full items-center bg-gray-100 px-12 dark:bg-gray-800'>
-            {fileName}
+          <div className='flex min-h-full items-center overflow-hidden bg-gray-100 px-12 capitalize dark:bg-gray-800'>
+            <p>{fileName}.</p>
+            <div
+              className={`flex h-8 ${
+                fileType === "ts" ? "translate-y-[2.25rem]" : "-translate-y-9"
+              }  transitions flex-col items-start justify-center space-y-12 normal-case`}
+            >
+              <span className='	 text-blue-500'>tsx</span>
+              <span className=' text-yellow-500 dark:text-yellow-300'>js</span>
+            </div>
           </div>
         </div>
         {activeTab === "preview" ? (
