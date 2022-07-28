@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import CodeIcon from "./icons/CodeIcon";
 import CopyIcon from "./icons/CopyIcon";
+import JsIcon from "./icons/JsIcon";
 import PreviewIcon from "./icons/PreviewIcon";
+import ReactIcon from "./icons/ReactIcon";
 import LanguageSelect from "./languageSelect";
 
 function ComponentPreview({
@@ -18,7 +20,6 @@ function ComponentPreview({
   fileType: "js" | "ts";
 }) {
   const [activeTab, setActivePanel] = useState("preview");
-  console.log("🔥", fileType);
   return (
     <section className=''>
       <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0'>
@@ -68,16 +69,33 @@ function ComponentPreview({
             <span className='h-3 w-3 rounded-full bg-amber-400 '></span>
             <span className='h-3 w-3 rounded-full bg-green-400 '></span>
           </div>
-          <div className='flex min-h-full items-center overflow-hidden bg-gray-100 px-12 capitalize dark:bg-gray-800'>
-            <p>{fileName}.</p>
+
+          <div className='flex min-w-[165px] items-center justify-between  space-x-6 overflow-hidden bg-gray-100 px-6 capitalize dark:bg-gray-800'>
             <div
+              className={`flex ${
+                fileType === "ts" ? "translate-y-2" : "-translate-y-[3.2rem]"
+              } transitions  h-8 translate-y-2 flex-col space-y-10`}
+            >
+              <div>
+                <ReactIcon />
+              </div>
+              <div>
+                <JsIcon />
+              </div>
+            </div>
+            <p>
+              {fileName}.<span className='normal-case'>{fileType}</span>
+            </p>
+
+            {/* <div
               className={`flex h-8 ${
                 fileType === "ts" ? "translate-y-[2.25rem]" : "-translate-y-9"
               }  transitions flex-col items-start justify-center space-y-12 normal-case`}
             >
+              <JsIcon />
               <span className='	 text-blue-500'>tsx</span>
               <span className=' text-yellow-500 dark:text-yellow-300'>js</span>
-            </div>
+            </div> */}
           </div>
         </div>
         {activeTab === "preview" ? (
