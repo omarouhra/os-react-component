@@ -22,7 +22,7 @@ function ComponentPreview({
   const [activeTab, setActivePanel] = useState("preview");
   return (
     <section className=''>
-      <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0'>
+      <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0 '>
         <p className='text-lg font-semibold text-gray-700 dark:text-white'>
           Simple Minimal {title}
         </p>
@@ -62,7 +62,7 @@ function ComponentPreview({
           </div>
         </div>
       </div>
-      <div>
+      <div className='shadow-lg rounded-md'>
         <div className='flex rounded-t-lg bg-gray-200  dark:bg-gray-700'>
           <div className='flex items-center space-x-1 p-4'>
             <span className='h-3 w-3 rounded-full bg-red-400 '></span>
@@ -70,7 +70,7 @@ function ComponentPreview({
             <span className='h-3 w-3 rounded-full bg-green-400 '></span>
           </div>
 
-          <div className='flex min-w-[165px] items-center justify-between  space-x-6 overflow-hidden bg-gray-100 px-6 capitalize dark:bg-gray-800'>
+          <div className='flex min-w-[165px]  items-center justify-between  space-x-6 overflow-hidden bg-gray-100 px-6 capitalize dark:bg-gray-800'>
             <div
               className={`flex ${
                 fileType === "ts" ? "translate-y-2" : "-translate-y-[3.2rem]"
