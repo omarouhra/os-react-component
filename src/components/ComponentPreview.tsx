@@ -50,7 +50,10 @@ function ComponentPreview({
             <div className='hidden h-8 w-0.5 bg-gray-400/20 md:inline-block'></div>
 
             <LanguageSelect />
-            <button className='short-transitions rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600'>
+            <button
+              className='short-transitions rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600'
+              aria-label='Copy code'
+            >
               <CopyIcon />
             </button>
           </div>
