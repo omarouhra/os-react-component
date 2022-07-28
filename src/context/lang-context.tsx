@@ -5,6 +5,7 @@ type Languages = "javascript" | "typescript";
 interface LanguageContextInterface {
   language: Languages;
   setLanguage: React.Dispatch<React.SetStateAction<Languages>>;
+  codeLanguage: "JScode" | "TScode";
 }
 
 const LanguageContext = createContext({} as LanguageContextInterface);
@@ -22,8 +23,15 @@ export const LangProvider = ({ children }: { children: React.ReactNode }) => {
       : setLanguage("typescript");
   }, [language]);
 
+  const codeLanguage =
+    language === "javascript"
+      ? "JScode"
+      : language === "typescript"
+      ? "TScode"
+      : "TScode";
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage, codeLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

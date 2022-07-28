@@ -3,9 +3,16 @@ import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import { allComponents, Component } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/MDXComponents";
+import ComponentPreview from "@/components/ComponentPreview";
+import { useLanguageContext } from "@/context/lang-context";
 
 function Preview({ component }: { component: Component }) {
+  const { language, setLanguage, codeLanguage } = useLanguageContext();
+
   const Component = useMDXComponent(component?.body.code);
+  const Code = useMDXComponent(component?.[codeLanguage].body.code);
+
+  console.log(language);
 
   return (
     <div>
@@ -13,7 +20,13 @@ function Preview({ component }: { component: Component }) {
         <AnimatedHeroTitle slug={component?.slug} />
       </section>
 
-      <Component components={{ ...MDXComponents }} />
+      <ComponentPreview
+        fileName={component.slug}
+        title={component.title}
+        preview={<Component components={{ ...MDXComponents }} />}
+      >
+        <Code />
+      </ComponentPreview>
     </div>
   );
 }

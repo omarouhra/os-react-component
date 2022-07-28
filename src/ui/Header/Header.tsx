@@ -26,7 +26,7 @@ const Header = () => {
       <div className='flex h-[70px] items-center justify-between border-b'>
         <div>
           <h1 className='text-2xl font-semibold'>
-            <div className='transitions group hover:scale-105 hover:animate-[spin_2s_infinite]'>
+            <div className='transitions group cursor-pointer hover:scale-105 hover:animate-[spin_2s_infinite]'>
               <OsIcon className='transitions transitions stroke-black group-hover:stroke-cyan-500 dark:stroke-white' />
             </div>
           </h1>
@@ -40,11 +40,11 @@ const Header = () => {
           } md:static md:flex md:h-auto md:w-auto md:space-x-4 md:bg-transparent md:px-0`}
         >
           <ul className='items-left flex flex-col space-y-2 md:flex-row md:items-center md:space-y-0 md:space-x-4'>
-            <li>Home</li>
+            <li className='cursor-pointer'>Home</li>
 
-            <li>About</li>
+            <li className='cursor-pointer'>About</li>
 
-            <li>Contact</li>
+            <li className='cursor-pointer'>Contact</li>
           </ul>
         </nav>
 
