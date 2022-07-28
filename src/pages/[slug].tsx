@@ -12,7 +12,9 @@ function Preview({ component }: { component: Component }) {
   const Component = useMDXComponent(component?.body.code);
   const Code = useMDXComponent(component?.[codeLanguage].body.code);
 
-  console.log(language);
+  const fileName = `${component.slug}.${codeLanguage
+    .toLowerCase()
+    .slice(0, 2)}`;
 
   return (
     <div>
@@ -21,7 +23,7 @@ function Preview({ component }: { component: Component }) {
       </section>
 
       <ComponentPreview
-        fileName={component.slug}
+        fileName={fileName}
         title={component.title}
         preview={<Component components={{ ...MDXComponents }} />}
       >

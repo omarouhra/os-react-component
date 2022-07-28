@@ -64,7 +64,7 @@ function ComponentPreview({
             <span className='h-3 w-3 rounded-full bg-green-400 dark:bg-slate-600'></span>
           </div>
           <div className='flex min-h-full items-center bg-gray-100 px-12 dark:bg-gray-800'>
-            {fileName}.js
+            {fileName}
           </div>
         </div>
         {activeTab === "preview" ? (
