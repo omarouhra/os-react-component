@@ -17,7 +17,7 @@ function Preview({ component }: { component: Component }) {
     .slice(0, 2)}`;
 
   return (
-    <div>
+    <div className='animate-fade-in-up'>
       <section className='py-12'>
         <AnimatedHeroTitle slug={component?.slug} />
       </section>

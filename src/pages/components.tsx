@@ -8,7 +8,7 @@ function Components() {
   const FILTERS = ["header", "form", "modal", "carousel"];
 
   return (
-    <div>
+    <div className='animate-fade-in-up'>
       <section className='py-12'>
         <HeroTitle />
         <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>

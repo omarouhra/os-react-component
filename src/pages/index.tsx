@@ -13,7 +13,7 @@ type Props = {
 
 const Home = (components: Props) => {
   return (
-    <>
+    <div className='animate-fade-in-up'>
       <section className='py-12 '>
         <HeroTitle />
         <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>
@@ -64,7 +64,7 @@ const Home = (components: Props) => {
           <LoadingComponent {...component} key={component.title} />
         ))}
       </section>
-    </>
+    </div>
   );
 };
 
