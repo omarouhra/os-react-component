@@ -15,7 +15,7 @@ function Preview({ component }: { component: Component }) {
   console.log(language);
 
   return (
-    <div>
+    <div className='animate-fade-in-up'>
       <section className='py-12'>
         <AnimatedHeroTitle slug={component?.slug} />
       </section>
