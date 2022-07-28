@@ -6,6 +6,7 @@ import TechnologiesCard from "@/components/TechnologyCard";
 import LoadingComponent from "@/components/LoadingComponent";
 import Link from "next/link";
 import HeroTitle from "@/components/HeroTitle";
+import Contibutor from "@/components/Contibutor";
 
 type Props = {
   components: Component[];
@@ -21,7 +22,6 @@ const Home = (components: Props) => {
           Dark/Light mode
         </p>
       </section>
-
       <section className=' flex  w-full max-w-3xl flex-col space-y-6 py-12 md:flex-row md:justify-between md:space-y-0'>
         <TechnologiesCard
           technology='Next.js: '
@@ -39,7 +39,6 @@ const Home = (components: Props) => {
           gradient='from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]'
         />
       </section>
-
       <section className='py-12 '>
         <h2 className='mb-4 text-xl font-semibold dark:text-white md:text-2xl'>
           Featured Components:
@@ -58,11 +57,28 @@ const Home = (components: Props) => {
           </a>
         </Link>
       </section>
-
       <section className='grid w-full grid-cols-1 gap-10 rounded-xl py-6  md:grid-cols-3'>
         {components.components.map((component) => (
           <LoadingComponent {...component} key={component.title} />
         ))}
+      </section>
+      <section className='py-12 '>
+        <h2 className='mb-4 text-xl font-semibold dark:text-white md:text-2xl'>
+          Contributors:
+        </h2>
+
+        <div className='flex flex-col  items-start justify-between md:flex-row md:items-center md:space-x-6'>
+          <Contibutor
+            name='Omar Ouhra'
+            role='Frontend Engineer  at Obytes'
+            src='https://github.com/omarouhra.png'
+          />
+          <Contibutor
+            name='Imad Atyat'
+            role='Frontend Engineer  at Obytes'
+            src='https://github.com/imadatyatalah.png'
+          />
+        </div>
       </section>
     </div>
   );
