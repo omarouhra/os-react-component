@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import highlight from "rehype-highlight";
 
 const ComponentCode = defineDocumentType(() => ({
   name: "Code",
@@ -43,4 +44,5 @@ const Component = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "data",
   documentTypes: [Component, ComponentCode],
+  mdx: { rehypePlugins: [highlight] },
 });
