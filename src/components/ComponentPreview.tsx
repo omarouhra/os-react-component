@@ -17,7 +17,7 @@ function ComponentPreview({
   children?: React.ReactNode;
   title: string;
   fileName: string;
-  fileType: "js" | "ts";
+  fileType: "jsx" | "tsx";
 }) {
   const [activeTab, setActivePanel] = useState("preview");
   return (
@@ -73,7 +73,7 @@ function ComponentPreview({
           <div className='flex items-center justify-between space-x-6  overflow-hidden  bg-gray-100 px-6 capitalize dark:bg-gray-800 sm:min-w-[165px] '>
             <div
               className={`flex ${
-                fileType === "ts" ? "translate-y-2" : "-translate-y-[3.2rem]"
+                fileType === "tsx" ? "translate-y-2" : "-translate-y-[3.2rem]"
               } transitions  h-8 translate-y-2 flex-col space-y-10`}
             >
               <div>
