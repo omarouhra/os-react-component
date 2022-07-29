@@ -76,7 +76,7 @@ const Home = (components: Props) => {
           <Contributor
             name='Imad Atyat'
             role='Frontend Engineer  at Obytes'
-            src='https://github.com/imadatyatalah.png'
+            src='/contributors/imadatyat.webp'
           />
         </div>
       </section>
