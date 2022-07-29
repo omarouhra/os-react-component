@@ -71,7 +71,7 @@ const Home = (components: Props) => {
           <Contributor
             name='Omar Ouhra'
             role='Frontend Engineer  at Obytes'
-            src='https://github.com/omarouhra.png'
+            src='/contributors/omarouhra.webp'
           />
           <Contributor
             name='Imad Atyat'
