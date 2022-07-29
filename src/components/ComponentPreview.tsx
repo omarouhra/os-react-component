@@ -17,7 +17,7 @@ function ComponentPreview({
   children?: React.ReactNode;
   title: string;
   fileName: string;
-  fileType: "js" | "ts";
+  fileType: "jsx" | "tsx";
 }) {
   const [activeTab, setActivePanel] = useState("preview");
   return (
@@ -62,7 +62,7 @@ function ComponentPreview({
           </div>
         </div>
       </div>
-      <div className='shadow-lg rounded-md'>
+      <div className='rounded-md shadow-lg'>
         <div className='flex rounded-t-lg bg-gray-200  dark:bg-gray-700'>
           <div className='flex items-center space-x-1 p-4'>
             <span className='h-3 w-3 rounded-full bg-red-400 '></span>
@@ -73,7 +73,7 @@ function ComponentPreview({
           <div className='flex min-w-[165px]  items-center justify-between  space-x-6 overflow-hidden bg-gray-100 px-6 capitalize dark:bg-gray-800'>
             <div
               className={`flex ${
-                fileType === "ts" ? "translate-y-2" : "-translate-y-[3.2rem]"
+                fileType === "tsx" ? "translate-y-2" : "-translate-y-[3.2rem]"
               } transitions  h-8 translate-y-2 flex-col space-y-10`}
             >
               <div>
