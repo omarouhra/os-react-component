@@ -6,7 +6,7 @@ type ContributorType = {
   role: string;
   src: string;
 };
-function Contibutor({ name, role, src }: ContributorType) {
+function Contributor({ name, role, src }: ContributorType) {
   return (
     <div className=' flex w-[full] items-center space-x-6 rounded-md py-4 md:px-4 '>
       <div className='transitions relative h-32 w-32 rounded-xl shadow-lg  '>
@@ -22,4 +22,4 @@ function Contibutor({ name, role, src }: ContributorType) {
   );
 }
 
-export default Contibutor;
+export default Contributor;

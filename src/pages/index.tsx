@@ -6,7 +6,7 @@ import TechnologiesCard from "@/components/TechnologyCard";
 import LoadingComponent from "@/components/LoadingComponent";
 import Link from "next/link";
 import HeroTitle from "@/components/HeroTitle";
-import Contibutor from "@/components/Contibutor";
+import Contributor from "@/components/Contributor";
 
 type Props = {
   components: Component[];
@@ -68,12 +68,12 @@ const Home = (components: Props) => {
         </h2>
 
         <div className='flex flex-col  items-start justify-between md:flex-row md:items-center md:space-x-6'>
-          <Contibutor
+          <Contributor
             name='Omar Ouhra'
             role='Frontend Engineer  at Obytes'
             src='https://github.com/omarouhra.png'
           />
-          <Contibutor
+          <Contributor
             name='Imad Atyat'
             role='Frontend Engineer  at Obytes'
             src='https://github.com/imadatyatalah.png'
