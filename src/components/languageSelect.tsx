@@ -19,8 +19,8 @@ const LanguageSelect = () => {
       value={language}
       onChange={handleChange}
     >
-      <option value='javascript'>JS</option>
-      <option value='typescript'>TS</option>
+      <option value='javascript'>Javascript</option>
+      <option value='typescript'>Typescript</option>
     </select>
   );
 };

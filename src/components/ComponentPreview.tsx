@@ -17,7 +17,7 @@ function ComponentPreview({
   children?: React.ReactNode;
   title: string;
   fileName: string;
-  fileType: "jsx" | "tsx";
+  fileType: "js" | "ts";
 }) {
   const [activeTab, setActivePanel] = useState("preview");
   return (
@@ -36,7 +36,7 @@ function ComponentPreview({
               onClick={() => setActivePanel("preview")}
             >
               <PreviewIcon />
-              <span className='text-sm'>Preview</span>
+              <span className='hidden text-sm sm:inline-block'>Preview</span>
             </button>
             <button
               className={`flex items-center space-x-2  rounded-lg py-1 px-3   short-transitions${
@@ -46,7 +46,7 @@ function ComponentPreview({
               onClick={() => setActivePanel("code")}
             >
               <CodeIcon />
-              <span className='text-sm'>Code</span>
+              <span className='hidden text-sm sm:inline-block'>Code</span>
             </button>
           </div>
           <div className='flex items-center space-x-2'>
@@ -54,7 +54,7 @@ function ComponentPreview({
 
             <LanguageSelect />
             <button
-              className='short-transitions rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600'
+              className='short-transitions hidden rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600 sm:inline-block'
               aria-label='Copy code'
             >
               <CopyIcon />
@@ -70,10 +70,10 @@ function ComponentPreview({
             <span className='h-3 w-3 rounded-full bg-green-400 '></span>
           </div>
 
-          <div className='flex min-w-[165px]  items-center justify-between  space-x-6 overflow-hidden bg-gray-100 px-6 capitalize dark:bg-gray-800'>
+          <div className='flex items-center justify-between space-x-6  overflow-hidden  bg-gray-100 px-6 capitalize dark:bg-gray-800 sm:min-w-[165px] '>
             <div
               className={`flex ${
-                fileType === "tsx" ? "translate-y-2" : "-translate-y-[3.2rem]"
+                fileType === "ts" ? "translate-y-2" : "-translate-y-[3.2rem]"
               } transitions  h-8 translate-y-2 flex-col space-y-10`}
             >
               <div>
