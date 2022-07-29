@@ -29,7 +29,7 @@ function ComponentPreview({
         <div className='flex w-full items-center justify-between space-x-3 md:w-auto md:justify-end'>
           <div className='flex'>
             <button
-              className={`short-transitions flex items-center space-x-2 rounded-lg  px-3 ${
+              className={`short-transitions flex items-center space-x-2 rounded-md  px-3 ${
                 activeTab === "preview" &&
                 " bg-blue-500 text-white shadow-md dark:bg-gray-600 dark:text-blue-400"
               }`}
@@ -39,7 +39,7 @@ function ComponentPreview({
               <span className='hidden text-sm sm:inline-block'>Preview</span>
             </button>
             <button
-              className={`flex items-center space-x-2  rounded-lg py-1 px-3   short-transitions${
+              className={`flex items-center space-x-2  rounded-md py-1 px-3   short-transitions${
                 activeTab === "code" &&
                 " bg-blue-500 text-white shadow-md dark:bg-gray-600 dark:text-blue-400"
               }`}
