@@ -20,13 +20,25 @@ function ComponentPreview({
   fileType: "jsx" | "tsx";
 }) {
   const [activeTab, setActivePanel] = useState("preview");
+  const [activeCopyTag, setActiveCopyTag] = useState(false);
+
+  const copyCode = () => {
+    // copy code functionality 
+
+    // show copied tag
+    setActiveCopyTag(true);
+
+    setTimeout(() => {
+      setActiveCopyTag(false);
+    }, 1200);
+  };
   return (
     <section className=''>
       <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0 '>
         <p className='text-lg font-semibold text-gray-700 dark:text-white'>
           Simple Minimal {title}
         </p>
-        <div className='flex w-full items-center justify-between space-x-3 md:w-auto md:justify-end'>
+        <div className='relative flex w-full items-center justify-between space-x-3 md:w-auto md:justify-end'>
           <div className='flex'>
             <button
               className={`short-transitions flex items-center space-x-2 rounded-md  px-3 ${
@@ -46,6 +58,7 @@ function ComponentPreview({
               onClick={() => setActivePanel("code")}
             >
               <CodeIcon />
+
               <span className='hidden text-sm sm:inline-block'>Code</span>
             </button>
           </div>
@@ -53,9 +66,16 @@ function ComponentPreview({
             <div className='hidden h-8 w-0.5 bg-gray-400/20 md:inline-block'></div>
 
             <LanguageSelect />
+            {activeCopyTag && (
+              <div className='animate-fade-in-up absolute -top-12 -right-[19px]  hidden rounded-md bg-blue-500 text-white px-4 py-2 text-xs sm:inline-block'>
+                Copied 👍
+              </div>
+            )}
+
             <button
-              className='short-transitions hidden rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600 sm:inline-block'
+              className=' short-transitions  hidden rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600 sm:inline-block'
               aria-label='Copy code'
+              onClick={() => copyCode()}
             >
               <CopyIcon />
             </button>
