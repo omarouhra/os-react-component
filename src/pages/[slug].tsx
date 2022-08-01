@@ -7,7 +7,7 @@ import ComponentPreview from "@/components/ComponentPreview";
 import { useLanguageContext } from "@/context/lang-context";
 
 function Preview({ component }: { component: Component }) {
-  const { language, setLanguage, codeLanguage } = useLanguageContext();
+  const { codeLanguage } = useLanguageContext();
 
   const Component = useMDXComponent(component.body.code);
   const Code = useMDXComponent(component?.[codeLanguage].body.code);
@@ -16,11 +16,10 @@ function Preview({ component }: { component: Component }) {
     | "jsx"
     | "tsx";
 
-  const codeToRemove = language === "javascript" ? "```jsx" : "```tsx";
-
-  const codeToBeCopied = component?.[codeLanguage].body.raw
-    .replace(codeToRemove, "")
-    .replace("```", "");
+  const codeToBeCopied = component?.[codeLanguage].body.raw.replace(
+    /(```jsx|```tsx)|(```)/g,
+    ""
+  );
 
   return (
     <div className='animate-fade-in-up'>
