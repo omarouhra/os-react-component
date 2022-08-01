@@ -12,18 +12,21 @@ function ComponentPreview({
   title,
   fileName,
   fileType,
+  codeToBeCopied,
 }: {
   preview?: JSX.Element;
   children?: React.ReactNode;
   title: string;
   fileName: string;
   fileType: "jsx" | "tsx";
+  codeToBeCopied: string;
 }) {
   const [activeTab, setActivePanel] = useState("preview");
   const [activeCopyTag, setActiveCopyTag] = useState(false);
 
   const copyCode = () => {
-    // copy code functionality 
+    // copy code functionality
+    navigator.clipboard.writeText(codeToBeCopied);
 
     // show copied tag
     setActiveCopyTag(true);
@@ -67,7 +70,7 @@ function ComponentPreview({
 
             <LanguageSelect />
             {activeCopyTag && (
-              <div className='animate-fade-in-up absolute -top-12 -right-[19px]  hidden rounded-md bg-blue-500 text-white px-4 py-2 text-xs sm:inline-block'>
+              <div className='absolute -top-12 -right-[19px] hidden  animate-fade-in-up rounded-md bg-blue-500 px-4 py-2 text-xs text-white sm:inline-block'>
                 Copied 👍
               </div>
             )}
