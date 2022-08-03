@@ -87,14 +87,14 @@ function ComponentPreview({
         </div>
       </div>
       <div className='rounded-md shadow-lg'>
-        <div className='flex rounded-t-lg bg-gray-200  dark:bg-gray-700'>
+        <div className='flex rounded-t-lg  bg-gray-600 dark:bg-gray-700'>
           <div className='flex items-center space-x-1 p-4'>
             <span className='h-3 w-3 rounded-full bg-red-400 '></span>
             <span className='h-3 w-3 rounded-full bg-amber-400 '></span>
             <span className='h-3 w-3 rounded-full bg-green-400 '></span>
           </div>
 
-          <div className='flex items-center justify-between space-x-6  overflow-hidden  bg-gray-100 px-6 capitalize dark:bg-gray-800 sm:min-w-[165px] '>
+          <div className='flex items-center justify-between space-x-6 overflow-hidden bg-gray-700 px-6  capitalize text-white dark:bg-gray-800 sm:min-w-[175px] '>
             <div
               className={`flex ${
                 fileType === "tsx" ? "translate-y-2" : "-translate-y-[3.2rem]"
@@ -108,18 +108,8 @@ function ComponentPreview({
               </div>
             </div>
             <p>
-              {fileName}.<span className='normal-case'>{fileType}</span>
+              {fileName}.<span className=' normal-case '>{fileType}</span>
             </p>
-
-            {/* <div
-              className={`flex h-8 ${
-                fileType === "ts" ? "translate-y-[2.25rem]" : "-translate-y-9"
-              }  transitions flex-col items-start justify-center space-y-12 normal-case`}
-            >
-              <JsIcon />
-              <span className='	 text-blue-500'>tsx</span>
-              <span className=' text-yellow-500 dark:text-yellow-300'>js</span>
-            </div> */}
           </div>
         </div>
         {activeTab === "preview" ? (
@@ -127,7 +117,7 @@ function ComponentPreview({
             {preview}
           </div>
         ) : (
-          <div className=' max-h-[500px] overflow-scroll rounded-b-md bg-gray-100 p-12  dark:bg-gray-800'>
+          <div className=' max-h-[500px] overflow-scroll rounded-b-md  bg-gray-700 p-12  dark:bg-gray-800'>
             {children}
           </div>
         )}
