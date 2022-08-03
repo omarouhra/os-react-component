@@ -5,6 +5,7 @@ import JsIcon from "./icons/JsIcon";
 import PreviewIcon from "./icons/PreviewIcon";
 import ReactIcon from "./icons/ReactIcon";
 import LanguageSelect from "./languageSelect";
+import copy from "copy-to-clipboard";
 
 function ComponentPreview({
   preview,
@@ -26,7 +27,7 @@ function ComponentPreview({
 
   const copyCode = () => {
     // copy code functionality
-    navigator.clipboard.writeText(codeToBeCopied);
+    copy(codeToBeCopied);
 
     // show copied tag
     setActiveCopyTag(true);
