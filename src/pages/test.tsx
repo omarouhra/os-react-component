@@ -11,7 +11,7 @@ function test() {
   return (
     <section className='space-y-20 py-20'>
       {/* Card  1*/}
-      <div className='relative bg-white px-6 py-8 shadow-xl  ring-1 ring-gray-900/5 hover:scale-[1.01] dark:bg-black sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10'>
+      <div className='relative bg-white px-6 py-8 shadow-xl  ring-1 ring-gray-900/5 hover:scale-[1.01] dark:bg-black/100 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10'>
         <div className='mx-auto max-w-md'>
           <div className='divide-y divide-gray-100'>
             <div className='space-y-6 py-8 '>
@@ -50,7 +50,7 @@ function test() {
       </div>
 
       {/* Card 2 */}
-      <div className='cursor-pointer  border px-6 py-12 shadow-xl  ring-gray-900/5 hover:scale-[1.01] dark:bg-gray-700  sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10'>
+      <div className='cursor-pointer   px-6 py-12 shadow-xl bg-white hover:scale-[1.01] dark:bg-black/100  sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10'>
         <div className=' mb-8 space-y-6  '>
           <p className=' text-xl text-gray-800 dark:text-white'>
             Welcome to Os React Components 🚀
@@ -60,7 +60,7 @@ function test() {
         {CARD_CONTENT.map((item, index) => (
           <div
             key={index}
-            className=' mb-4 flex items-center bg-white px-4 py-3 opacity-70 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:translate-x-2 hover:opacity-100  dark:bg-black dark:text-white sm:mx-auto sm:max-w-lg sm:rounded-lg'
+            className=' mb-4 flex items-center bg-white px-4 py-3 text-black shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:translate-x-2   sm:mx-auto sm:max-w-lg sm:rounded-lg'
           >
             <svg
               className='h-6 w-6 flex-none fill-gray-100 stroke-gray-500 stroke-2'
