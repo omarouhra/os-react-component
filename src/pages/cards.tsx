@@ -7,7 +7,7 @@ const CARD_CONTENT = [
   "Minimal components with animaitions",
 ];
 
-function test() {
+function cards() {
   return (
     <section className='space-y-20 py-20'>
       {/* Card  1*/}
@@ -50,7 +50,7 @@ function test() {
       </div>
 
       {/* Card 2 */}
-      <div className='cursor-pointer   px-6 py-12 shadow-xl bg-white hover:scale-[1.01] dark:bg-black/100  sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10'>
+      <div className='cursor-pointer   bg-white px-6 py-12 shadow-xl hover:scale-[1.01] dark:bg-black/100  sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10'>
         <div className=' mb-8 space-y-6  '>
           <p className=' text-xl text-gray-800 dark:text-white'>
             Welcome to Os React Components 🚀
@@ -81,4 +81,4 @@ function test() {
   );
 }
 
-export default test;
+export default cards;
