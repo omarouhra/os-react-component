@@ -119,7 +119,7 @@ function ComponentPreview({
             {preview}
           </div>
         ) : (
-          <div className=' max-h-[500px] overflow-scroll rounded-b-md  bg-gray-700 p-12  dark:bg-gray-800'>
+          <div className='relative min-h-[500px] overflow-scroll rounded-b-md  bg-gray-700 p-12  dark:bg-gray-800'>
             {children}
           </div>
         )}
