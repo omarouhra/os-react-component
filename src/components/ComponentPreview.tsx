@@ -5,25 +5,31 @@ import JsIcon from "./icons/JsIcon";
 import PreviewIcon from "./icons/PreviewIcon";
 import ReactIcon from "./icons/ReactIcon";
 import LanguageSelect from "./languageSelect";
+import { useLanguageContext } from "@/context/lang-context";
 import copy from "copy-to-clipboard";
+import { Component } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import MDXComponents from "./MDXComponents";
 
-function ComponentPreview({
-  preview,
-  children,
-  title,
-  fileName,
-  fileType,
-  codeToBeCopied,
-}: {
-  preview?: JSX.Element;
-  children?: React.ReactNode;
-  title: string;
-  fileName: string;
-  fileType: "jsx" | "tsx";
-  codeToBeCopied: string;
-}) {
+function ComponentPreview({ component }: { component: Component }) {
   const [activeTab, setActivePanel] = useState<"preview" | "code">("preview");
   const [activeCopyTag, setActiveCopyTag] = useState(false);
+
+  const { codeLanguage } = useLanguageContext();
+
+  const Component = useMDXComponent(component.body.code);
+  const Code = useMDXComponent(component?.[codeLanguage].body.code);
+
+  const fileName = component.slug;
+
+  const fileType = `${codeLanguage.toLowerCase().slice(0, 2)}x` as
+    | "jsx"
+    | "tsx";
+
+  const codeToBeCopied = component?.[codeLanguage].body.raw.replace(
+    /(```jsx|```tsx)|(```)/g,
+    ""
+  );
 
   const copyCode = () => {
     // copy code functionality
@@ -40,7 +46,7 @@ function ComponentPreview({
     <section className=''>
       <div className='flex flex-col items-start justify-between space-y-4 py-2 md:flex-row  md:items-center md:space-y-0 '>
         <p className='text-lg font-semibold text-gray-700 dark:text-white'>
-          Simple Minimal {title}
+          Simple Minimal {component.title}
         </p>
         <div className='relative flex w-full items-center justify-between space-x-3 md:w-auto md:justify-end'>
           <div className='flex'>
@@ -116,11 +122,11 @@ function ComponentPreview({
         )}
         {activeTab === "preview" ? (
           <div className=' h-[500px] rounded-md bg-gray-100 px-5 pt-5  dark:bg-gray-800 '>
-            {preview}
+            <Component components={{ ...MDXComponents }} />
           </div>
         ) : (
           <div className='relative min-h-[500px] overflow-scroll rounded-b-md  bg-gray-700 p-12  dark:bg-gray-800'>
-            {children}
+            <Code />
           </div>
         )}
       </div>

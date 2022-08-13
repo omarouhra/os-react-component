@@ -1,51 +1,34 @@
 import React from "react";
 import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import { allComponents, Component } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
-import MDXComponents from "@/components/MDXComponents";
 import ComponentPreview from "@/components/ComponentPreview";
-import { useLanguageContext } from "@/context/lang-context";
 
-function Preview({ component }: { component: Component }) {
-  const { codeLanguage } = useLanguageContext();
-
-  const Component = useMDXComponent(component.body.code);
-  const Code = useMDXComponent(component?.[codeLanguage].body.code);
-
-  const fileTyle = `${codeLanguage.toLowerCase().slice(0, 2)}x` as
-    | "jsx"
-    | "tsx";
-
-  const codeToBeCopied = component?.[codeLanguage].body.raw.replace(
-    /(```jsx|```tsx)|(```)/g,
-    ""
-  );
-
+function Preview({
+  components,
+  slug,
+}: {
+  components: Component[];
+  slug: string;
+}) {
   return (
     <div className='animate-fade-in-up'>
       <section className='py-12'>
-        <AnimatedHeroTitle slug={component?.slug} />
+        <AnimatedHeroTitle slug={slug} />
       </section>
 
-      <ComponentPreview
-        codeToBeCopied={codeToBeCopied}
-        fileName={component.slug}
-        fileType={fileTyle}
-        title={component.title}
-        preview={<Component components={{ ...MDXComponents }} />}
-      >
-        <Code />
-      </ComponentPreview>
+      {components.map((component) => (
+        <ComponentPreview component={component} key={component.slug} />
+      ))}
     </div>
   );
 }
 
 export const getStaticProps = async ({ params }: any) => {
-  const component = allComponents.find(
-    (component) => component.slug === params.slug
+  const components = allComponents.filter((component) =>
+    component.slug.startsWith(params.slug)
   );
 
-  return { props: { component } };
+  return { props: { components, slug: params.slug } };
 };
 
 export async function getStaticPaths() {
