@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 
 //Container height animation
-const container = {
+const containerHeight = {
   hidden: {
     height: "100%",
   },
@@ -14,13 +14,27 @@ const container = {
     transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 }
   }
 }
+//Container width animation
+const containerWidth = {
+  hidden: {
+    width: "100%",
+  },
+  visible: {
+    width: "0%",
+    transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 }
+  }
+}
 
 
 // Container children delay
 const delayChildren = {
-  animate: {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
     transition: {
-      staggerChildren: 1.4
+      staggerChildren: 0.4
     }
   }
 
@@ -48,16 +62,12 @@ function heros() {
         animate="visible"
         className="relative py-8 bg-gray-50 dark:bg-gray-800 h-[500px] flex items-center justify-center shadow-2xl">
         <motion.div
-          variants={ container }
+          variants={ containerHeight }
           className="z-50 absolute top-0 w-full h-full bg-blue-900"></motion.div>
         <motion.h1
           variants={ fadeIn }
-          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-3xl lg:leading-tight'>
-          Ready to use React{ " " }
-          <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-xl font-extrabold text-transparent lg:text-3xl'>
-            Components
-          </span>{ " " }
-          with high end code quality 🚀
+          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-2xl lg:leading-tight'>
+          Simple Splash Screen 🚀
         </motion.h1>
       </motion.section>
 
@@ -73,23 +83,40 @@ function heros() {
           variants={ delayChildren }
           className="z-50 absolute top-0 w-full h-full flex">
           <motion.div
-            variants={ container }
+            variants={ containerHeight }
             className="w-1/3 h-full bg-blue-900"></motion.div>
           <motion.div
-            variants={ container }
+            variants={ containerHeight }
             className="w-1/3 h-full bg-blue-500"></motion.div>
           <motion.div
-            variants={ container }
+            variants={ containerHeight }
             className="w-1/3 h-full bg-blue-300"></motion.div>
         </motion.div>
         <motion.h1
           variants={ fadeIn }
-          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-3xl lg:leading-tight'>
-          Ready to use React{ " " }
-          <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-xl font-extrabold text-transparent lg:text-3xl'>
-            Components
-          </span>{ " " }
-          with high end code quality 🚀
+          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-2xl lg:leading-tight'>
+          Nested Container Splash Screen 🚀
+        </motion.h1>
+      </motion.section>
+
+
+
+      {/* Splash Screen 3 */ }
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        className="relative py-8 bg-gray-50 dark:bg-gray-800 h-[500px] flex items-center justify-center shadow-2xl">
+        <motion.div
+          variants={ delayChildren }
+          className="z-50 absolute top-0 w-full h-full flex">
+          <motion.div
+            variants={ containerWidth }
+            className="h-full bg-gradient-to-r from-blue-900 via-blue-300 to-purple-300"></motion.div>
+        </motion.div>
+        <motion.h1
+          variants={ fadeIn }
+          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-2xl lg:leading-tight'>
+          Reaveal Splash Screen 🚀
         </motion.h1>
       </motion.section>
     </div >
