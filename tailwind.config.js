@@ -5,6 +5,9 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        cal: ["Cal Sans", "Inter var", "sans-serif"],
+      },
       keyframes: {
         shimmer: {
           "100%": {

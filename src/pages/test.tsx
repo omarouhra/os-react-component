@@ -66,7 +66,7 @@ function heros() {
           className="z-50 absolute top-0 w-full h-full bg-blue-900"></motion.div>
         <motion.h1
           variants={ fadeIn }
-          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-2xl lg:leading-tight'>
+          className='mb-6 max-w-3xl text-xl font-cal  text-center dark:text-white lg:text-2xl lg:leading-tight'>
           Simple Splash Screen 🚀
         </motion.h1>
       </motion.section>
@@ -94,7 +94,7 @@ function heros() {
         </motion.div>
         <motion.h1
           variants={ fadeIn }
-          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-2xl lg:leading-tight'>
+          className='mb-6 max-w-3xl text-xl font-cal text-center dark:text-white lg:text-2xl lg:leading-tight'>
           Nested Container Splash Screen 🚀
         </motion.h1>
       </motion.section>
@@ -115,7 +115,7 @@ function heros() {
         </motion.div>
         <motion.h1
           variants={ fadeIn }
-          className='mb-6 max-w-3xl text-xl font-bold text-center dark:text-white lg:text-2xl lg:leading-tight'>
+          className='mb-6 max-w-3xl text-xl font-cal text-center dark:text-white lg:text-2xl lg:leading-tight'>
           Reaveal Splash Screen 🚀
         </motion.h1>
       </motion.section>

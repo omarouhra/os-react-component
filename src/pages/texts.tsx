@@ -71,7 +71,7 @@ function texts() {
             <motion.div
                 initial='hidden'
                 animate='visible'
-                className="py-12 bg-white dark:bg-black/10 px-5 rounded-md shadow-2xl border text-center ">
+                className="py-12 bg-white dark:bg-black/10 px-5 rounded-md   text-center ">
 
                 <motion.div
 

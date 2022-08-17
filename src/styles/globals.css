@@ -2,12 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Cal Sans";
+    src: url("../../public/fonts/CalSans-SemiBold.woff2") format("woff2"),
+      url("../../public/fonts/CalSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+}
 body {
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   user-select: none;
 }
+
+
 
 header,
 main,
@@ -154,3 +167,4 @@ img {
 .hljs-tag {
   /* purposely ignored */
 }
+
