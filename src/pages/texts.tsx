@@ -27,22 +27,18 @@ function texts() {
         hidden: {
             y: "40%",
             opacity: 0,
-            color: "#0055FF",
-
-            transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
+            // transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
         },
         visible: {
             y: 0,
             opacity: 1,
-            color: "#FF0088",
-
             transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 }
         }
     };
     // Text color animation
     const colorAnimation = {
         hidden: {
-            color: "#FF0088",
+            color: "#68acff",
         },
         visible: {
             color: "#0055FF",
@@ -71,7 +67,7 @@ function texts() {
             <motion.div
                 initial='hidden'
                 animate='visible'
-                className="py-12 bg-white dark:bg-black/10 px-5 rounded-md   text-center ">
+                className="py-12 bg-white dark:bg-black/10 px-5 rounded-md   text-center h-[400px] flex items-center justify-center  border ">
 
                 <motion.div
 
@@ -94,7 +90,7 @@ function texts() {
             <motion.div
                 initial='hidden'
                 animate='visible'
-                className="py-12 bg-white dark:bg-black/10 px-5 rounded-md shadow-2xl border text-center ">
+                className="py-12 bg-white dark:bg-black/10 px-5 rounded-md  text-center  h-[400px] flex items-center justify-center  border">
 
                 <motion.div
 
@@ -106,6 +102,34 @@ function texts() {
                             <motion.span
                                 className='inline-block text-3xl md:text-7xl font-cal mt-3  transition duration-500 '
                                 variants={ colorAnimation }
+                                key={ index }>{ element }</motion.span>
+                        )
+                    }) }
+                </motion.div>
+            </motion.div>
+
+
+            {/* Blend background Text Animation  */ }
+            <motion.div
+                initial='hidden'
+                animate='visible'
+                className="py-12 relative bg-white dark:bg-black/10 px-5 rounded-md text-center h-[400px] flex items-center justify-center  border">
+                <motion.div
+                    variants={ containerAnimation }
+                >
+                    <motion.div
+                        initial={ { height: "100%" } }
+                        animate={ {
+                            height: "0",
+                            transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 5 }
+                        } }
+
+                        className="bg-black dark:bg-white h-full w-full absolute top-0 left-0"></motion.div>
+                    { words.flat().map((element, index) => {
+                        return (
+                            <motion.span
+                                className='inline-block text-3xl md:text-7xl font-cal mt-3 text-white mix-blend-difference  transition duration-500 '
+                                variants={ letterAnimation }
                                 key={ index }>{ element }</motion.span>
                         )
                     }) }

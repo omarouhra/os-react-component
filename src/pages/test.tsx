@@ -111,7 +111,7 @@ function heros() {
           className="z-50 absolute top-0 w-full h-full flex">
           <motion.div
             variants={ containerWidth }
-            className="h-full bg-gradient-to-r from-blue-900 via-blue-300 to-purple-300"></motion.div>
+            className="h-full bg-gradient-to-r from-blue-900 to-cyan-300"></motion.div>
         </motion.div>
         <motion.h1
           variants={ fadeIn }
