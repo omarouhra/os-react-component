@@ -11,7 +11,7 @@ function AnimatedHeroTitle({ slug }: any) {
   }, [title]);
 
   return (
-    <h1 className='mb-6 max-w-3xl text-3xl font-bold dark:text-white lg:text-5xl lg:leading-tight  '>
+    <h1 className='mb-6 max-w-3xl text-4xl font-cal dark:text-white lg:text-5xl lg:leading-tight  '>
       Ready to use React{" "}
       <div className='h-12  w-min overflow-hidden '>
         <div
@@ -21,10 +21,10 @@ function AnimatedHeroTitle({ slug }: any) {
               : "translate-y-8 md:translate-y-12"
           } transitions  flex-col justify-center space-y-4 md:space-y-12`}
         >
-          <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-3xl font-extrabold text-transparent lg:text-5xl'>
+          <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-4xl font-extrabold text-transparent lg:text-5xl'>
             Components
           </span>{" "}
-          <span className=' bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-3xl font-extrabold capitalize text-transparent lg:text-5xl'>
+          <span className=' bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-4xl font-extrabold capitalize text-transparent lg:text-5xl'>
             {slug}
           </span>{" "}
         </div>
