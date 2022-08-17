@@ -77,7 +77,7 @@ function texts() {
                     { words.flat().map((element, index) => {
                         return (
                             <motion.span
-                                className='inline-block text-3xl md:text-7xl font-cal mt-3  transition duration-500 '
+                                className='inline-block text-3xl md:text-7xl font-cal mt-3  '
                                 variants={ letterAnimation }
                                 key={ index }>{ element }</motion.span>
                         )
@@ -100,7 +100,7 @@ function texts() {
                     { words.flat().map((element, index) => {
                         return (
                             <motion.span
-                                className='inline-block text-3xl md:text-7xl font-cal mt-3  transition duration-500 '
+                                className='inline-block text-3xl md:text-7xl font-cal mt-3   '
                                 variants={ colorAnimation }
                                 key={ index }>{ element }</motion.span>
                         )
@@ -128,7 +128,7 @@ function texts() {
                     { words.flat().map((element, index) => {
                         return (
                             <motion.span
-                                className='inline-block text-3xl md:text-7xl font-cal mt-3 text-white mix-blend-difference  transition duration-500 '
+                                className='inline-block text-3xl md:text-7xl font-cal mt-3 text-white mix-blend-difference'
                                 variants={ letterAnimation }
                                 key={ index }>{ element }</motion.span>
                         )
