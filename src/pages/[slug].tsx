@@ -13,12 +13,12 @@ function Preview({
   return (
     <div className='animate-fade-in-up'>
       <section className='py-12'>
-        <AnimatedHeroTitle slug={slug} />
+        <AnimatedHeroTitle componentTitle={ components[0].title } />
       </section>
 
-      {components.map((component) => (
-        <ComponentPreview component={component} key={component.slug} />
-      ))}
+      { components.map((component) => (
+        <ComponentPreview component={ component } key={ component.slug } />
+      )) }
     </div>
   );
 }

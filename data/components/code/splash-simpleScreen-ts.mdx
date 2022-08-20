@@ -1,0 +1,49 @@
+---
+name: TypeScript Simple Splash
+---
+
+```jsx
+function SimpleSplash({ title }: { title: string }) {
+  //Container height animation
+  const containerHeight = {
+    hidden: {
+      height: "100%",
+    },
+    visible: {
+      height: "0%",
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 },
+    },
+  };
+
+  //Fade In animation
+  const fadeIn = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2 },
+    },
+  };
+  return (
+    <motion.section
+      initial='hidden'
+      animate='visible'
+      className='relative flex h-[500px] items-center justify-center bg-gray-50 py-8 shadow-2xl dark:bg-gray-800'
+    >
+      <motion.div
+        variants={containerHeight}
+        className='absolute top-0 z-50 h-full w-full bg-blue-900'
+      ></motion.div>
+      <motion.h1
+        variants={fadeIn}
+        className='mb-6 max-w-3xl text-center font-cal  text-xl dark:text-white lg:text-2xl lg:leading-tight'
+      >
+        {title}
+      </motion.h1>
+    </motion.section>
+  );
+}
+```

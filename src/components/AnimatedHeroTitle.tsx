@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-function AnimatedHeroTitle({ slug }: any) {
+function AnimatedHeroTitle({ componentTitle }: any) {
   const [title, setTitle] = useState(false);
 
   useEffect(() => {
@@ -12,24 +12,23 @@ function AnimatedHeroTitle({ slug }: any) {
 
   return (
     <h1 className='mb-6 max-w-3xl text-4xl font-cal dark:text-white lg:text-5xl lg:leading-tight  '>
-      Ready to use React{" "}
+      Ready to use React{ " " }
       <div className='h-12  w-min overflow-hidden '>
         <div
-          className={`overflow-hidde tansitions flex h-8 w-min md:h-12 ease-out ${
-            title
-              ? "-translate-y-6 md:-translate-y-12"
-              : "translate-y-8 md:translate-y-12"
-          } transitions  flex-col justify-center space-y-4 md:space-y-12`}
+          className={ `overflow-hidde tansitions flex h-8 w-max md:h-12 ease-out ${title
+            ? "-translate-y-6 md:-translate-y-12"
+            : "translate-y-8 md:translate-y-12"
+            } transitions  flex-col justify-center space-y-4 md:space-y-12` }
         >
           <span className='bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-4xl font-extrabold text-transparent lg:text-5xl'>
             Components
-          </span>{" "}
+          </span>{ " " }
           <span className=' bg-gradient-to-r from-blue-700 to-cyan-300 bg-clip-text text-4xl font-extrabold capitalize text-transparent lg:text-5xl'>
-            {slug}
-          </span>{" "}
+            { componentTitle }
+          </span>{ " " }
         </div>
       </div>
-      {/* with high end code quality 🚀 */}
+      {/* with high end code quality 🚀 */ }
     </h1>
   );
 }
