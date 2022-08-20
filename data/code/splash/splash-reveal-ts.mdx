@@ -1,16 +1,16 @@
 ---
-name: JavaScript Nested Splash
+name: TypeScript Reveal Splash
 ---
 
-```jsx
-function NestedSplash({ title }) {
-  // Container height animation
-  const containerHeight = {
+```tsx
+function RevealSplash({ title }: { title: string }) {
+  // Container width animation
+  const containerWidth = {
     hidden: {
-      height: "100%",
+      width: "100%",
     },
     visible: {
-      height: "0%",
+      width: "0%",
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 },
     },
   };
@@ -52,16 +52,8 @@ function NestedSplash({ title }) {
         className='absolute top-0 z-50 flex h-full w-full'
       >
         <motion.div
-          variants={containerHeight}
-          className='h-full w-1/3 bg-blue-900'
-        ></motion.div>
-        <motion.div
-          variants={containerHeight}
-          className='h-full w-1/3 bg-blue-500'
-        ></motion.div>
-        <motion.div
-          variants={containerHeight}
-          className='h-full w-1/3 bg-blue-300'
+          variants={containerWidth}
+          className='h-full bg-gradient-to-r from-blue-900 to-cyan-300'
         ></motion.div>
       </motion.div>
       <motion.h1

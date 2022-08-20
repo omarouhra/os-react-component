@@ -1,10 +1,10 @@
 // Components
-import { SimpleSplash, Nestedsplash, Revealsplash } from "@/ui/splash";
+import { SimpleSplash, NestedSplash, RevealSplash } from "@/ui/splash";
 
 const MDXComponents = {
   SimpleSplash,
-  Nestedsplash,
-  Revealsplash,
+  NestedSplash,
+  RevealSplash,
 };
 
 export default MDXComponents;

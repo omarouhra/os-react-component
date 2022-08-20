@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-//Container height animation
+// Container height animation
 const containerHeight = {
   hidden: {
     height: "100%",
@@ -11,7 +11,8 @@ const containerHeight = {
     transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 },
   },
 };
-//Container width animation
+
+// Container width animation
 const containerWidth = {
   hidden: {
     width: "100%",
@@ -34,7 +35,8 @@ const delayChildren = {
     },
   },
 };
-//Fade In animation
+
+// Fade In animation
 const fadeIn = {
   hidden: {
     opacity: 0,
@@ -68,7 +70,7 @@ function SimpleSplash() {
   );
 }
 
-function Nestedsplash() {
+function NestedSplash() {
   return (
     <motion.section
       initial='hidden'
@@ -102,7 +104,7 @@ function Nestedsplash() {
   );
 }
 
-function Revealsplash() {
+function RevealSplash() {
   return (
     <motion.section
       initial='hidden'
@@ -128,4 +130,4 @@ function Revealsplash() {
   );
 }
 
-export { SimpleSplash, Nestedsplash, Revealsplash };
+export { SimpleSplash, NestedSplash, RevealSplash };
