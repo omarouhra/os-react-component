@@ -5,36 +5,36 @@ import ComponentPreview from "@/components/ComponentPreview";
 
 function Preview({
   components,
-  slug,
+  title,
 }: {
   components: Component[];
-  slug: string;
+  title: string;
 }) {
   return (
     <div className='animate-fade-in-up'>
       <section className='py-12'>
-        <AnimatedHeroTitle componentTitle={ components[0].title } />
+        <AnimatedHeroTitle componentTitle={title} />
       </section>
 
-      { components.map((component) => (
-        <ComponentPreview component={ component } key={ component.slug } />
-      )) }
+      {components.map((component) => (
+        <ComponentPreview component={component} key={component.slug} />
+      ))}
     </div>
   );
 }
 
 export const getStaticProps = async ({ params }: any) => {
-  const components = allComponents.filter((component) =>
-    component.slug.startsWith(params.slug)
+  const components = allComponents.filter(
+    (component) => component.config.slug === params.slug
   );
 
-  return { props: { components, slug: params.slug } };
+  return { props: { components, title: components[0].config.title } };
 };
 
 export async function getStaticPaths() {
   return {
     paths: allComponents.map((component) => ({
-      params: { slug: component.slug },
+      params: { slug: component.config.slug },
     })),
     fallback: false,
   };

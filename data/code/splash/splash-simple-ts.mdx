@@ -1,10 +1,9 @@
 ---
-name: JavaScript Simple Splash
+name: TypeScript Simple Splash
 ---
 
-```jsx
-function SimpleSplash({ title }) {
-    
+```tsx
+function SimpleSplash({ title }: { title: string }) {
   //Container height animation
   const containerHeight = {
     hidden: {
@@ -40,7 +39,7 @@ function SimpleSplash({ title }) {
       ></motion.div>
       <motion.h1
         variants={fadeIn}
-        className='mb-6 max-w-3xl text-center font-cal  text-xl dark:text-white lg:text-2xl lg:leading-tight'
+        className='font-cal mb-6 max-w-3xl text-center  text-xl dark:text-white lg:text-2xl lg:leading-tight'
       >
         {title}
       </motion.h1>

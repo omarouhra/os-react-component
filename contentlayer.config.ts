@@ -3,16 +3,26 @@ import highlight from "rehype-highlight";
 
 const ComponentCode = defineDocumentType(() => ({
   name: "Code",
-  filePathPattern: "components/code/*.mdx",
+  filePathPattern: "code/**/*.mdx",
   contentType: "mdx",
   fields: {
     name: { type: "string", required: true },
   },
 }));
 
+const Config = defineDocumentType(() => ({
+  name: "Config",
+  filePathPattern: "components/**/config.md",
+  contentType: "markdown",
+  fields: {
+    title: { type: "string", required: true },
+    slug: { type: "string", required: true },
+  },
+}));
+
 const Component = defineDocumentType(() => ({
   name: "Component",
-  filePathPattern: "components/*.mdx",
+  filePathPattern: "components/**/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
@@ -32,6 +42,12 @@ const Component = defineDocumentType(() => ({
       embedDocument: true,
       required: true,
     },
+    config: {
+      type: "reference",
+      of: Config,
+      embedDocument: true,
+      required: true,
+    },
   },
   computedFields: {
     slug: {
@@ -43,6 +59,6 @@ const Component = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "data",
-  documentTypes: [Component, ComponentCode],
+  documentTypes: [Component, Config, ComponentCode],
   mdx: { rehypePlugins: [highlight] },
 });
