@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier-format": "npx prettier --write .",
-    "prettier-check": "npx prettier --check ."
+    "prettier-check": "npx prettier --check .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "contentlayer": "^0.2.6",
@@ -26,6 +27,7 @@
     "autoprefixer": "^10.4.7",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
+    "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
