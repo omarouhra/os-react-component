@@ -13,7 +13,7 @@ function Header() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
- 
+
   return (
     <header className='py-8'>
       <div className='flex items-center justify-between'>

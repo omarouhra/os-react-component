@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier-format": "npx prettier --write .",
+    "prettier-check": "npx prettier --check ."
   },
   "dependencies": {
     "contentlayer": "^0.2.6",

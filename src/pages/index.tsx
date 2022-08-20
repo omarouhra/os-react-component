@@ -40,7 +40,7 @@ const Home = (components: Props) => {
         />
       </section>
       <section className='py-12 '>
-        <h2 className='mb-4 text-xl font-cal dark:text-white md:text-2xl'>
+        <h2 className='mb-4 font-cal text-xl dark:text-white md:text-2xl'>
           Featured Components:
         </h2>
         <p className=' mb-4 max-w-2xl text-sm font-light leading-normal text-gray-500 dark:text-gray-300'>
@@ -63,7 +63,7 @@ const Home = (components: Props) => {
         ))}
       </section>
       <section className='py-12 '>
-        <h2 className='mb-4 text-xl font-cal dark:text-white md:text-2xl'>
+        <h2 className='mb-4 font-cal text-xl dark:text-white md:text-2xl'>
           Contributors:
         </h2>
 
