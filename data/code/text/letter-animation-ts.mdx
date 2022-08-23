@@ -1,0 +1,73 @@
+---
+name: TypeScript Letter Animation
+---
+
+```tsx
+import { motion } from "framer-motion";
+
+const getWords = (text: string) => {
+  // splite words
+  const splitWords = text.split(" ");
+
+  // splite words to letters
+  const words = splitWords.map((word) => {
+    return word.split("");
+  });
+
+  //  adding spacing
+  words.map((word) => {
+    return word.push("\u00A0");
+  });
+
+  return words;
+};
+
+const LetterAnimation = () => {
+  // letter animation
+  const letterAnimation = {
+    hidden: {
+      y: "40%",
+      opacity: 0,
+      // transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+    },
+  };
+
+  // letter container animation
+  const containerAnimation = {
+    visible: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      initial='hidden'
+      animate='visible'
+      className='flex h-[400px] items-center justify-center rounded-md   border bg-white py-12 px-5 text-center  dark:bg-black/10 '
+    >
+      <motion.div variants={containerAnimation}>
+        {getWords()
+          .flat()
+          .map((element, index) => {
+            return (
+              <motion.span
+                className='mt-3 inline-block font-cal text-3xl md:text-7xl  '
+                variants={letterAnimation}
+                key={index}
+              >
+                {element}
+              </motion.span>
+            );
+          })}
+      </motion.div>
+    </motion.div>
+  );
+};
+```
