@@ -7,8 +7,8 @@ type IconType = {
 function OsIcon({ className }: IconType) {
   return (
     <svg
-      width='42'
-      height='47'
+      width='40'
+      height='40'
       viewBox='0 0 42 47'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

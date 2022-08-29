@@ -111,7 +111,8 @@ function RevealSplash() {
     >
       <motion.div
         variants={delayChildren}
-        className='absolute top-0 z-50 flex h-full w-full'
+        className='absolute top-0 z-50 flex h-full w-full' 
+        
       >
         <motion.div
           variants={containerWidth}
