@@ -14,7 +14,7 @@ const LanguageSelect = () => {
 
   return (
     <select
-      className='short-transitions rounded-md border border-blue-500 bg-transparent p-2 text-sm text-gray-500 outline-blue-500 dark:text-gray-200 dark:outline-blue-300 md:border-none'
+      className='rounded-md border border-blue-500 bg-transparent p-2 text-sm text-gray-500 outline-blue-500 dark:text-gray-200 dark:outline-blue-300 md:border-none'
       id='languageSelect'
       value={language}
       onChange={handleChange}

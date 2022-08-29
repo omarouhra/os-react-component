@@ -50,7 +50,7 @@ function ComponentPreview({ component }: { component: Component }) {
           { component.title }
         </p>
         <motion.div
-          layout
+
           className=' h-[40px] md:h-[60px] relative flex w-full items-center justify-between space-x-3 md:w-auto md:justify-end'>
           <AnimatePresence >
             { activeTab === 'code' &&
