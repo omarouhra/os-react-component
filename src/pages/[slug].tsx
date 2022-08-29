@@ -15,7 +15,6 @@ function Preview({
       <section className='py-12'>
         <AnimatedHeroTitle componentTitle={title} />
       </section>
-
       {components.map((component) => (
         <ComponentPreview component={component} key={component.slug} />
       ))}
