@@ -5,6 +5,7 @@ import { pick } from "contentlayer/client";
 import HeroTitle from "@/components/HeroTitle";
 import Contributor from "@/components/Contributor";
 import ComponentCard from "@/components/ComponentCard";
+import { motion } from "framer-motion";
 
 type Props = {
   components: Component[];
@@ -44,6 +45,16 @@ const OSCOMPONENTS = [
   },
 ]
 
+
+const container = {
+
+  show: {
+    transition: {
+      staggerChildren: 0.3
+    }
+  }
+}
+
 const Home = (components: Props) => {
   return (
     <div className='animate-fade-in-up'>
@@ -65,14 +76,17 @@ const Home = (components: Props) => {
           Wrestling with a bunch of complex media queries in your CSS sucks, so
           Tailwind lets you build responsive designs right in your HTML instead.
         </p>
-        <div className='grid w-full grid-cols-1 gap-10 rounded-xl py-8  md:grid-cols-3'>
+        <motion.div
+          variants={ container }
+          initial="hidden"
+          animate="show"
+          className='grid w-full grid-cols-1 gap-10 rounded-xl py-8  md:grid-cols-3'>
           { OSCOMPONENTS.map(({ lable, link, gradient }, index) => (
             <ComponentCard key={ index } gradient={ gradient } lable={ lable } link={ link } />
-
           )) }
-        </div>
+        </motion.div>
       </section>
-      
+
       <section className='py-12 '>
         <h2 className='mb-4 font-cal text-xl dark:text-white md:text-2xl'>
           Contributors:
@@ -91,7 +105,7 @@ const Home = (components: Props) => {
           />
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 

@@ -4,7 +4,7 @@ import Footer from "@/components/Layout/Footer";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='transitions min-h-screen bg-gray-50/95 dark:bg-gray-900'>
+    <div className='transitions min-h-screen bg-gray-50/95 dark:bg-gray-900 overflow-hidden'>
       <Header />
       <main>{children}</main>
       <Footer />

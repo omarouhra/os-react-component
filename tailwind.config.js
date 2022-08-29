@@ -24,6 +24,14 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        rocket: {
+          "0%": {
+            transform: "scale(1.05)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
         spin: {
           from: {
             transform: "rotate(0deg)",
@@ -36,6 +44,7 @@ module.exports = {
     },
     animation: {
       "fade-in-up": "fade-in-up 0.5s ease-out",
+      rocket: "rocket 0.2s ease-out infinite",
     },
   },
   plugins: [],
