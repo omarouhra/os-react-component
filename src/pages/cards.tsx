@@ -17,7 +17,7 @@ function Cards() {
       <motion.div
         animate={ { height: !showModal ? 48 : 200, width: !showModal ? 48 : "40%", borderRadius: showModal ? 5 : 5, } }
         layout
-        onClick={ () => setShowModal(!showModal) } className=' relative bg-gray-200 overflow-hidden  flex  flex-col items-start justify-center'>
+        onClick={ () => setShowModal(!showModal) } className=' relative bg-gray-100 dark:bg-gray-800 overflow-hidden  flex  flex-col items-start justify-center'>
         <div className="absolute top-2 left-2 h-[32px]  overflow-hidden">
           <div className={ `space-y-4 transition duration-500 ${showModal ? '-translate-y-12 ' : 'translate-y-0 '}` }>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8 text-blue-500  ">
@@ -32,8 +32,8 @@ function Cards() {
           initial={ { opacity: 0 } }
           animate={ { opacity: 1, transition: { duration: 0.7 } } }
           className="px-5">
-          <h2 className="font-cal text-2xl mb-3 dark:text-black">Title</h2>
-          <p className=" text-sm font-light text-gray-600">Lorem ipsum dolor sit amet, conss, reiciendis. ipsum doLoremlor sit amet, conse</p>
+          <h2 className="font-cal text-2xl mb-3 ">Title</h2>
+          <p className=" text-sm font-light text-gray-600 dark:text-gray-200">Lorem ipsum dolor sit amet, conss, reiciendis. ipsum doLoremlor sit amet, conse</p>
         </motion.div> }
       </motion.div>
     </section >
