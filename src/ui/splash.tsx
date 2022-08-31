@@ -52,7 +52,7 @@ function SimpleSplash() {
     <motion.section
       initial='hidden'
       animate='visible'
-      className='relative flex h-full items-center justify-center bg-gray-50 py-8 dark:bg-gray-800 '
+      className='relative flex h-full w-full items-center justify-center bg-gray-50 py-8 dark:bg-gray-800 '
     >
       <motion.div
         variants={ containerHeight }
@@ -73,7 +73,7 @@ function NestedSplash() {
     <motion.section
       initial='hidden'
       animate='visible'
-      className='relative flex h-full items-center justify-center bg-gray-50 py-8 dark:bg-gray-800 '
+      className='relative flex h-full w-full items-center justify-center bg-gray-50 py-8 dark:bg-gray-800 '
     >
       <motion.div
         variants={ delayChildren }
@@ -107,7 +107,7 @@ function RevealSplash() {
     <motion.section
       initial='hidden'
       animate='visible'
-      className='relative flex h-full items-center justify-center bg-gray-50 py-8 dark:bg-gray-800 '
+      className='relative flex h-full  w-full items-center justify-center bg-gray-50 py-8 dark:bg-gray-800 '
     >
       <motion.div
         variants={ delayChildren }

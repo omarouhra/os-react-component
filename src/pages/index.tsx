@@ -24,25 +24,11 @@ const OSCOMPONENTS = [
     gradient: 'from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]'
   },
   {
-    lable: 'Titles',
-    link: '/text',
-    gradient: 'from-[#D8B4FE] to-[#818CF8]'
+    lable: 'Modal',
+    link: '/modal',
+    gradient: 'from-[#ed985f] to-[#0e97e7]'
   },
-  {
-    lable: 'Splash screens',
-    link: '/splash',
-    gradient: 'from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]'
-  },
-  {
-    lable: 'Titles',
-    link: '/text',
-    gradient: 'from-[#D8B4FE] to-[#818CF8]'
-  },
-  {
-    lable: 'Splash screens',
-    link: '/splash',
-    gradient: 'from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]'
-  },
+
 ]
 
 

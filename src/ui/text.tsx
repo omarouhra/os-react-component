@@ -47,7 +47,7 @@ const LetterAnimation = () => {
     <motion.div
       initial='hidden'
       animate='visible'
-      className='flex h-full items-center justify-center rounded-md bg-white  px-5 text-center  dark:bg-black/10 '
+      className='flex h-full  w-full items-center justify-center rounded-md bg-white  px-5 text-center  dark:bg-black/10 '
     >
       <motion.div variants={ containerAnimation }>
         { getWords()
@@ -94,7 +94,7 @@ const GradientTextAnimation = () => {
     <motion.div
       initial='hidden'
       animate='visible'
-      className='flex h-full items-center justify-center rounded-md    bg-white  px-5 text-center  dark:bg-black/10'
+      className='flex h-full w-full items-center justify-center rounded-md    bg-white  px-5 text-center  dark:bg-black/10'
     >
       <motion.div variants={ containerAnimation }>
         { getWords()
@@ -144,7 +144,7 @@ const BlendBackgroundTextAnimation = () => {
     <motion.div
       initial='hidden'
       animate='visible'
-      className='relative flex h-full items-center justify-center rounded-md  bg-white px-5 text-center  dark:bg-black/10'
+      className='relative flex h-full w-full items-center justify-center rounded-md  bg-white px-5 text-center  dark:bg-black/10'
     >
       <motion.div variants={ containerAnimation }>
         <motion.div

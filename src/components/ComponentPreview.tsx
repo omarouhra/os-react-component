@@ -133,7 +133,7 @@ function ComponentPreview({ component }: { component: Component }) {
           </div>
         ) }
         { activeTab === "preview" ? (
-          <div className='mb-12 h-[250px] md:h-[500px] overflow-hidden rounded-md  bg-gray-100  shadow dark:bg-gray-800'>
+          <div className='mb-12 h-[250px] md:h-[500px] overflow-hidden rounded-md bg-gray-100  shadow dark:bg-gray-800'>
             <Component components={ { ...MDXComponents } } />
           </div>
         ) : (
