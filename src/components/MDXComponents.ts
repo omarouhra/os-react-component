@@ -5,7 +5,7 @@ import {
   GradientTextAnimation,
   BlendBackgroundTextAnimation,
 } from "@/ui/text";
-
+import SimpleModal from "@/ui/modal";
 const MDXComponents = {
   // Splash
   SimpleSplash,
@@ -16,6 +16,9 @@ const MDXComponents = {
   LetterAnimation,
   GradientTextAnimation,
   BlendBackgroundTextAnimation,
+
+  // Modal
+  SimpleModal,
 };
 
 export default MDXComponents;
