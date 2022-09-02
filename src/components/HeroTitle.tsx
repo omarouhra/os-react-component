@@ -14,7 +14,7 @@ function HeroTitle() {
       >
         <motion.p
           initial={ { opacity: 1 } }
-          animate={ { rotate:[0,10,20], y: -500, x: 800, transition: { duration: 1, delay: 3 } } }
+          animate={ { rotate:[0,10,20], y: -500, x: 800, transition: { duration: 1, delay: 2 } } }
         >🚀</motion.p>
       </div>
 
