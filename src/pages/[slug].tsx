@@ -2,19 +2,25 @@ import React from "react";
 import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import { allComponents, Component } from "contentlayer/generated";
 import ComponentPreview from "@/components/ComponentPreview";
+import ViewCounter from "@/components/ViewCounter";
 
 function Preview({
   components,
   title,
+  slug,
 }: {
   components: Component[];
   title: string;
+  slug: string;
 }) {
   return (
     <div className='animate-fade-in-up'>
       <section className='py-12'>
         <AnimatedHeroTitle componentTitle={title} />
       </section>
+
+      <ViewCounter slug={slug} />
+
       {components.map((component) => (
         <ComponentPreview component={component} key={component.slug} />
       ))}
@@ -27,7 +33,13 @@ export const getStaticProps = async ({ params }: any) => {
     (component) => component.config.slug === params.slug
   );
 
-  return { props: { components, title: components[0].config.title } };
+  return {
+    props: {
+      components,
+      title: components[0].config.title,
+      slug: components[0].config.slug,
+    },
+  };
 };
 
 export async function getStaticPaths() {
