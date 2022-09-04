@@ -2,6 +2,14 @@
 
 This project provides complete and ready-to-use animated components with high-end code quality using Next.js, Tailwind.css, And Framer Motion!
 
+## Dev Stack:
+1. Next.js
+2. Tailwind.css
+3. Framer Motion
+5. Prisma
+6. PlanetScale
+7. Vercel
+
 ## Adding a component
 
 Follow the following steps to display a component in Contentlayer:
