@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo {...NextSeo} />
 
-      <ThemeProvider defaultTheme='system' attribute='class'>
+      <ThemeProvider defaultTheme='dark' attribute='class'>
         <LangProvider>
           <Layout>
             <Component {...pageProps} />
