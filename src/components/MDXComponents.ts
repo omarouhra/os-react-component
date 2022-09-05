@@ -6,6 +6,8 @@ import {
   BlendBackgroundTextAnimation,
 } from "@/ui/text";
 import SimpleModal from "@/ui/modal";
+import GridComponents from "@/ui/GridComponents";
+
 const MDXComponents = {
   // Splash
   SimpleSplash,
@@ -19,6 +21,8 @@ const MDXComponents = {
 
   // Modal
   SimpleModal,
+
+  GridComponents,
 };
 
 export default MDXComponents;
