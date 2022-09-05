@@ -99,11 +99,13 @@ const Home = () => {
               name='Omar Ouhra'
               role='Frontend Engineer  at Obytes'
               src='/contributors/omarouhra.webp'
+              href='https://twitter.com/OuhraOmar'
             />
             <Contributor
               name='Imad Atyat'
               role='Frontend Engineer  at Obytes'
               src='/contributors/imadatyat.webp'
+              href='https://twitter.com/ImadAtyat'
             />
           </div>
         </section>
