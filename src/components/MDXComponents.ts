@@ -7,6 +7,7 @@ import {
 } from "@/ui/text";
 import SimpleModal from "@/ui/modal";
 import GridComponents from "@/ui/GridComponents";
+import HeroTitle from "@/ui/HeroTitle";
 
 const MDXComponents = {
   // Splash
@@ -23,6 +24,8 @@ const MDXComponents = {
   SimpleModal,
 
   GridComponents,
+
+  HeroTitle,
 };
 
 export default MDXComponents;

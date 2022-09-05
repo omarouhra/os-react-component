@@ -1,11 +1,9 @@
 import HeroTitle from "@/components/HeroTitle";
 import Contributor from "@/components/Contributor";
-import ComponentCard from "@/components/ComponentCard";
-import { motion } from "framer-motion";
 import { NextSeo } from "next-seo";
 import { LinkedinShare, TwitterShare } from "@/components/Share";
 import ThemeButton from "@/ui/themeButton";
-import GridComponents from "@/ui/GridComponents";
+import GridComponents from "@/components/GridComponents";
 
 const Home = () => {
   return (
