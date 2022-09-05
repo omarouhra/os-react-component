@@ -7,13 +7,15 @@ import { NextSeo } from "next-seo";
 function Preview({
   components,
   title,
+  slug,
 }: {
   components: Component[];
   title: string;
+  slug: string;
 }) {
   return (
     <>
-      <NextSeo title={title} />
+      <NextSeo title={title} canonical={`https://os-c.vercel.app/${slug}`} />
 
       <div className='animate-fade-in-up'>
         <section className='py-12'>
@@ -32,7 +34,13 @@ export const getStaticProps = async ({ params }: any) => {
     (component) => component.config.slug === params.slug
   );
 
-  return { props: { components, title: components[0].config.title } };
+  return {
+    props: {
+      components,
+      title: components[0].config.title,
+      slug: components[0].config.slug,
+    },
+  };
 };
 
 export async function getStaticPaths() {

@@ -34,7 +34,7 @@ const container = {
 const Home = () => {
   return (
     <>
-      <NextSeo title='Home' />
+      <NextSeo title='Home' canonical='https://os-c.vercel.app' />
 
       <div className='animate-fade-in-up'>
         <section className='py-12 '>

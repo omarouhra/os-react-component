@@ -8,6 +8,14 @@ const NextSeo = {
     locale: "en_US",
     url: "https://os-c.vercel.app/",
     site_name: "OS components",
+
+    images: [
+      {
+        url: "https://os-c.vercel.app/og.png",
+        height: 1200,
+        width: 630,
+      },
+    ],
   },
 
   twitter: {

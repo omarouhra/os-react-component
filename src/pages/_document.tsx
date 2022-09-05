@@ -22,13 +22,6 @@ const Document = () => {
           href='/favicon-16x16.png'
         />
         <link rel='manifest' href='/site.webmanifest' />
-        <meta property='og:title' content='os components 🚀' />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://os-c.vercel.app/' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta property='og:image' content='/og.png' />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
       </Head>
       <body>
         <Main />
