@@ -73,19 +73,19 @@ const Home = () => {
             Tailwind.css, and Framer Motion
           </p>
           <motion.div
-            variants={ container }
+            variants={container}
             initial='hidden'
             animate='show'
             className='grid w-full grid-cols-1 gap-10 rounded-xl py-8  md:grid-cols-3'
           >
-            { OSCOMPONENTS.map(({ lable, link, gradient }, index) => (
+            {OSCOMPONENTS.map(({ lable, link, gradient }, index) => (
               <ComponentCard
-                key={ index }
-                gradient={ gradient }
-                lable={ lable }
-                link={ link }
+                key={index}
+                gradient={gradient}
+                lable={lable}
+                link={link}
               />
-            )) }
+            ))}
           </motion.div>
         </section>
 
