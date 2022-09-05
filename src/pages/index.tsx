@@ -73,20 +73,35 @@ const Home = () => {
             Tailwind.css, and Framer Motion
           </p>
           <motion.div
-            variants={container}
+            variants={ container }
             initial='hidden'
             animate='show'
             className='grid w-full grid-cols-1 gap-10 rounded-xl py-8  md:grid-cols-3'
           >
-            {OSCOMPONENTS.map(({ lable, link, gradient }, index) => (
+            { OSCOMPONENTS.map(({ lable, link, gradient }, index) => (
               <ComponentCard
-                key={index}
-                gradient={gradient}
-                lable={lable}
-                link={link}
+                key={ index }
+                gradient={ gradient }
+                lable={ lable }
+                link={ link }
               />
-            ))}
+            )) }
           </motion.div>
+        </section>
+
+        <section className='py-12 '>
+          <h2 className='mb-4 font-cal text-xl dark:text-white md:text-2xl'>
+            Share the app
+          </h2>
+
+          <p className='mb-6 font-light text-gray-500 dark:text-gray-200'>
+            Let your friends know about OS Component App!
+          </p>
+
+          <div className='flex items-center  space-x-4'>
+            <TwitterShare />
+            <LinkedinShare />
+          </div>
         </section>
 
         <section className='py-12 '>
@@ -107,21 +122,6 @@ const Home = () => {
               src='/contributors/imadatyat.webp'
               href='https://twitter.com/ImadAtyat'
             />
-          </div>
-        </section>
-
-        <section className='py-12 '>
-          <h2 className='mb-4 font-cal text-xl dark:text-white md:text-2xl'>
-            Share the app
-          </h2>
-
-          <p className='mb-6 font-light text-gray-500 dark:text-gray-200'>
-            Let your friends know about OS Component App!
-          </p>
-
-          <div className='flex items-center  space-x-4'>
-            <TwitterShare />
-            <LinkedinShare />
           </div>
         </section>
       </div>
