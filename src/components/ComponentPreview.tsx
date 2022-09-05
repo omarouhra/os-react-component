@@ -21,7 +21,7 @@ function ComponentPreview({ component }: { component: Component }) {
   const Component = useMDXComponent(component.body.code);
   const Code = useMDXComponent(component?.[codeLanguage].body.code);
 
-  const fileName = component.slug;
+  const fileName = 'OsComponent';
 
   const fileType = `${codeLanguage.toLowerCase().slice(0, 2)}x` as
     | "jsx"
@@ -62,19 +62,23 @@ function ComponentPreview({ component }: { component: Component }) {
                 } }
                 className='flex items-center space-x-2'>
                 <LanguageSelect />
-                { activeCopyTag && (
-                  <div className='absolute -top-12 -right-[19px] hidden  animate-fade-in-up rounded-md bg-blue-500 px-4 py-2 text-xs text-white sm:inline-block'>
-                    Copied 👍
-                  </div>
-                ) }
 
-                <button
-                  className=' short-transitions  hidden rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600 sm:inline-block'
-                  aria-label='Copy code'
-                  onClick={ () => copyCode() }
-                >
-                  <CopyIcon />
-                </button>
+
+                <div className="relative">
+                  { activeCopyTag && (
+                    <div className='absolute -top-12 right-[-15px] hidden min-w-[80px] text-center  animate-fade-in-up rounded-md bg-blue-500 p-2 text-xs text-white sm:inline-block'>
+                      Copied 👍
+                    </div>
+                  ) }
+                  <button
+                    className=' short-transitions  hidden rounded-lg py-3 px-3 hover:bg-blue-500 hover:text-white dark:hover:bg-gray-600 sm:inline-block'
+                    aria-label='Copy code'
+                    onClick={ () => copyCode() }
+                  >
+                    <CopyIcon />
+                  </button>
+                </div>
+
                 { activeTab === 'code' && <div className='hidden h-8 w-0.5 bg-gray-400/20 md:inline-block'></div> }
               </motion.div>
             }
@@ -114,7 +118,8 @@ function ComponentPreview({ component }: { component: Component }) {
               <span className='h-3 w-3 rounded-full bg-green-400 '></span>
             </div>
 
-            <div className='flex items-center justify-between space-x-6 overflow-hidden bg-gray-700 px-6  capitalize text-white dark:bg-gray-800 sm:min-w-[175px] '>
+            <div className='flex items-center justify-between space-x-6 overflow-hidden bg-gray-700 px-6  capitalize text-white dark:bg-gray-800 
+            md:min-w-[230px] '>
               <div
                 className={ `flex ${fileType === "tsx" ? "translate-y-2" : "-translate-y-[3.2rem]"
                   } transitions  h-8 translate-y-2 flex-col space-y-10` }

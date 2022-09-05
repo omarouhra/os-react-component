@@ -26,7 +26,7 @@ const OSCOMPONENTS = [
   {
     lable: 'Modal',
     link: '/modal',
-    gradient: 'from-[#ed985f] to-[#0e97e7]'
+    gradient: 'from-[#a575d1] to-[#10d5eb]'
   },
 
 ]
@@ -47,7 +47,8 @@ const Home = (components: Props) => {
       <section className='py-12 '>
         <HeroTitle />
         <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>
-          JS/TS, Responsive, Semantique HTML, Accessibilty(A11y) No packages,
+          JS/TS, Responsive, Semantique HTML, Accessibilty(A11y), Framer Motion
+          <span className="inline-block mx-2 translate-y-1"><svg height="25" viewBox="3.7 3.7 43.6 43.6" width="25" xmlns="http://www.w3.org/2000/svg"><path d="m47.3 3.7v21.8l-10.9 10.9-10.9 10.9-10.9-10.9 10.9-10.9v.1-.1z" fill="#59529d" /><path d="m47.3 25.5v21.8l-10.9-10.9z" fill="#5271b4" /><path d="m25.5 25.5-10.9 10.9-10.9 10.9v-43.6l10.9 10.9z" fill="#bb4b96" /></svg></span>,
           Dark/Light mode
         </p>
       </section>
@@ -57,10 +58,7 @@ const Home = (components: Props) => {
           Featured Components:
         </h2>
         <p className=' mb-4 max-w-2xl text-sm font-light leading-normal text-gray-500 dark:text-gray-300'>
-          Wrestling with a bunch of complex media queries in your CSS sucks, so
-          Tailwind lets you build responsive designs right in your HTML instead.
-          Wrestling with a bunch of complex media queries in your CSS sucks, so
-          Tailwind lets you build responsive designs right in your HTML instead.
+          Our Goal is to build the biggest component library using Next.js, Tailwind.css, and Framer Motion
         </p>
         <motion.div
           variants={ container }
