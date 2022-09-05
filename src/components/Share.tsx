@@ -2,7 +2,7 @@ import LinkedinIcon from "../components/icons/LinkedinIcon";
 import TwitterIcon from "../components/icons/TwitterIcon";
 
 export const TwitterShare = () => {
-  const ShareURL = `https://twitter.com/intent/tweet?text=Ayats Wallpaper App&url=https://os-c.vercel.app`;
+  const ShareURL = `https://twitter.com/intent/tweet?text=OS Components &url=https://os-c.vercel.app`;
 
   return (
     <a href={ShareURL} target='_blank' rel='noopener noreferrer'>
