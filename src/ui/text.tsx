@@ -30,7 +30,12 @@ const LetterAnimation = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75, repeat: Infinity, repeatDelay: 5 },
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.75,
+        repeat: Infinity,
+        repeatDelay: 5,
+      },
     },
   };
 
@@ -49,20 +54,20 @@ const LetterAnimation = () => {
       animate='visible'
       className='flex h-full  w-full items-center justify-center rounded-md bg-white  px-5 text-center  dark:bg-black/10 '
     >
-      <motion.div variants={ containerAnimation }>
-        { getWords()
+      <motion.div variants={containerAnimation}>
+        {getWords()
           .flat()
           .map((element, index) => {
             return (
               <motion.span
                 className='inline-block font-cal text-3xl md:text-7xl'
-                variants={ letterAnimation }
-                key={ index }
+                variants={letterAnimation}
+                key={index}
               >
-                { element }
+                {element}
               </motion.span>
             );
-          }) }
+          })}
       </motion.div>
     </motion.div>
   );
@@ -77,7 +82,12 @@ const GradientTextAnimation = () => {
     visible: {
       color: "#0055FF",
 
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1, repeat: Infinity, repeatDelay: 5 },
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 1,
+        repeat: Infinity,
+        repeatDelay: 5,
+      },
     },
   };
 
@@ -96,20 +106,20 @@ const GradientTextAnimation = () => {
       animate='visible'
       className='flex h-full w-full items-center justify-center rounded-md    bg-white  px-5 text-center  dark:bg-black/10'
     >
-      <motion.div variants={ containerAnimation }>
-        { getWords()
+      <motion.div variants={containerAnimation}>
+        {getWords()
           .flat()
           .map((element, index) => {
             return (
               <motion.span
                 className='inline-block font-cal text-3xl md:text-7xl'
-                variants={ colorAnimation }
-                key={ index }
+                variants={colorAnimation}
+                key={index}
               >
-                { element }
+                {element}
               </motion.span>
             );
-          }) }
+          })}
       </motion.div>
     </motion.div>
   );
@@ -126,7 +136,12 @@ const BlendBackgroundTextAnimation = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75, repeat: Infinity, repeatDelay: 5 },
+      transition: {
+        ease: [0.455, 0.03, 0.515, 0.955],
+        duration: 0.75,
+        repeat: Infinity,
+        repeatDelay: 5,
+      },
     },
   };
 
@@ -135,7 +150,6 @@ const BlendBackgroundTextAnimation = () => {
     visible: {
       transition: {
         staggerChildren: 0.08,
-
       },
     },
   };
@@ -146,28 +160,33 @@ const BlendBackgroundTextAnimation = () => {
       animate='visible'
       className='relative flex h-full w-full items-center justify-center rounded-md  bg-white px-5 text-center  dark:bg-black/10'
     >
-      <motion.div variants={ containerAnimation }>
+      <motion.div variants={containerAnimation}>
         <motion.div
-          initial={ { height: "100%" } }
-          animate={ {
+          initial={{ height: "100%" }}
+          animate={{
             height: "0",
-            transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2, repeat: Infinity, repeatDelay: 3.5 },
-          } }
+            transition: {
+              ease: [0.455, 0.03, 0.515, 0.955],
+              duration: 2,
+              repeat: Infinity,
+              repeatDelay: 3.5,
+            },
+          }}
           className='absolute top-0 left-0 h-full w-full bg-black dark:bg-white'
         ></motion.div>
-        { getWords()
+        {getWords()
           .flat()
           .map((element, index) => {
             return (
               <motion.span
                 className='inline-block font-cal text-3xl text-white mix-blend-difference md:text-7xl'
-                variants={ letterAnimation }
-                key={ index }
+                variants={letterAnimation}
+                key={index}
               >
-                { element }
+                {element}
               </motion.span>
             );
-          }) }
+          })}
       </motion.div>
     </motion.div>
   );
