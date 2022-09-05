@@ -20,7 +20,7 @@ function GridComponents() {
     },
     {
       lable: "Theme Button",
-      link: "/themebutton",
+      link: "/theme-button",
       gradient: "from-[#D8B4FE] to-[#818CF8]",
     },
     {
