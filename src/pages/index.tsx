@@ -9,9 +9,6 @@ const Home = () => {
   return (
     <>
       <NextSeo title='Home' canonical='https://os-c.vercel.app' />
-
-      <ThemeButton />
-
       <div className='animate-fade-in-up'>
         <section className='py-12 '>
           <HeroTitle />
