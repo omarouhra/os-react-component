@@ -6,10 +6,12 @@ import ThemeButton from "@/ui/themeButton";
 import GridComponents from "@/components/GridComponents";
 
 const Home = () => {
+  var randNum = Math.floor(Math.random() * 10) + 1;
   return (
     <>
       <NextSeo title='Home' canonical='https://os-c.vercel.app' />
       <div className='animate-fade-in-up'>
+        <h1 className='font-cal text-3xl'>{randNum}</h1>
         <section className='py-12 '>
           <HeroTitle />
           <p className='text-sm font-light text-gray-500 dark:text-gray-300 md:max-w-md md:text-base'>
