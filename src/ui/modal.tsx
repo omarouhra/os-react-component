@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function SimpleModal() {
   const [showModal, setShowModal] = useState<boolean>(false);

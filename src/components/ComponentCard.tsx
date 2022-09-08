@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React from "react";
 
 type cardType = {
   lable: string;

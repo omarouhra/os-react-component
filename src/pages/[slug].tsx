@@ -1,4 +1,3 @@
-import React from "react";
 import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import { allComponents, Component } from "contentlayer/generated";
 import ComponentPreview from "@/components/ComponentPreview";

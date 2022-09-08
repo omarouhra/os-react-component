@@ -1,7 +1,6 @@
 import type { Component } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 function LoadingComponent({ image, title }: Component) {
   return (

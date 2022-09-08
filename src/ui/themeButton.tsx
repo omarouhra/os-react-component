@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function ThemeButton() {
   const [darkTheme, setDarkTheme] = useState(false);
