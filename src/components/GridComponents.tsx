@@ -33,6 +33,11 @@ function GridComponents() {
       link: "/grid-component",
       gradient: "from-[#a575d1] to-[#10d5eb]",
     },
+    {
+      lable: "Loader Component",
+      link: "/loader",
+      gradient: "from-[#a575d1] to-[#10d5eb]",
+    },
   ];
 
   const container = {

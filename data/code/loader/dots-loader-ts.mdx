@@ -1,0 +1,36 @@
+---
+name: TypeScript Dots Loader
+---
+
+```tsx
+import { motion } from "framer-motion";
+
+function DotsLoader() {
+  return (
+    <div className='flex h-full flex-col items-center justify-center space-y-4'>
+      <motion.div
+        className='flex h-8 w-8 justify-around'
+        variants={containerVariants}
+        initial='start'
+        animate='end'
+      >
+        <motion.span
+          className='block h-2 w-2 rounded-md bg-blue-600'
+          variants={circleVariants}
+          transition={loadingCircleTransition}
+        />
+        <motion.span
+          className='block h-2 w-2 rounded-md bg-blue-600'
+          variants={circleVariants}
+          transition={loadingCircleTransition}
+        />
+        <motion.span
+          className='block h-2 w-2 rounded-md bg-blue-600'
+          variants={circleVariants}
+          transition={loadingCircleTransition}
+        />
+      </motion.div>
+    </div>
+  );
+}
+```
