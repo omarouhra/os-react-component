@@ -1,3 +1,5 @@
+![Os Components](https://github.com/omarouhra/os-react-component/blob/main/public/og.png)
+
 ## Quick description:
 
 This project provides complete and ready-to-use animated components with high-end code quality using Next.js, Tailwind.css, And Framer Motion!
