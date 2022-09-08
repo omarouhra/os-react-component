@@ -3,6 +3,7 @@ import AnimatedHeroTitle from "@/components/AnimatedHeroTitle";
 import { allComponents, Component } from "contentlayer/generated";
 import ComponentPreview from "@/components/ComponentPreview";
 import { NextSeo } from "next-seo";
+import type { GetStaticProps } from "next";
 
 function Preview({
   components,
@@ -29,9 +30,9 @@ function Preview({
   );
 }
 
-export const getStaticProps = async ({ params }: any) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const components = allComponents.filter(
-    (component) => component.config.slug === params.slug
+    (component) => component.config.slug === params?.slug
   );
 
   return {

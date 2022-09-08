@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-function AnimatedHeroTitle({ componentTitle }: any) {
+function AnimatedHeroTitle({ componentTitle }: { componentTitle: string }) {
   const [title, setTitle] = useState(false);
 
   useEffect(() => {
