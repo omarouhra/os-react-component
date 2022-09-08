@@ -6,8 +6,7 @@ const LanguageSelect = () => {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     e.preventDefault();
 
-    // @ts-ignore
-    setLanguage(e.target.value);
+    setLanguage(e.target.value as "javascript" | "typescript");
 
     localStorage.setItem("language", e.target.value);
   };
