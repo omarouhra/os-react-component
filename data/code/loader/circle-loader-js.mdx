@@ -5,6 +5,12 @@ name: JavaScript Circle Loader
 ```jsx
 import { motion } from "framer-motion";
 
+const spinAnimation = {
+  loop: Infinity,
+  ease: "linear",
+  duration: 1,
+};
+
 function CircleLoader() {
   return (
     <div className='flex h-full flex-col items-center justify-center space-y-4'>
