@@ -16,7 +16,7 @@ This project provides complete and ready-to-use animated components with high-en
 
 ### Running the app locally
 
-1. Clone this repo 
+1. Clone this repo
 2. Run yarn on the repo to install node_modules
 3. Run yarn dev to start the app. If you wish to run on a different port, run yarn dev -p 8000
 4. Open localhost:3000
@@ -93,10 +93,10 @@ type Props = {
 ````
 
 ## Contributors
+
 - [Omar Ouhra](https://twitter.com/OuhraOmar)
 - [Imad Atyat Allah](https://twitter.com/ImadAtyat)
 - Next contributor name ...
-
 
 <p align="center">
 Made by proud Morroccan Developers 🇲🇦 🇲🇦
