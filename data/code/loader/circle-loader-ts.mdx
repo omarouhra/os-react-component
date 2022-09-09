@@ -1,0 +1,27 @@
+---
+name: TypeScript Circle Loader
+---
+
+```tsx
+import { motion } from "framer-motion";
+
+const spinAnimation = {
+  loop: Infinity,
+  ease: "linear",
+  duration: 1,
+};
+
+function CircleLoader() {
+  return (
+    <div className='flex h-full flex-col items-center justify-center space-y-4'>
+      <div className='relative box-border h-8 w-8'>
+        <motion.span
+          className='absolute top-0 left-0 box-border block  h-8 w-8 rounded-full border-4 border-t-4 border-solid border-[#1A4670] border-t-[#1C7ED6]'
+          animate={{ rotate: 360 }}
+          transition={spinAnimation}
+        />
+      </div>
+    </div>
+  );
+}
+```
