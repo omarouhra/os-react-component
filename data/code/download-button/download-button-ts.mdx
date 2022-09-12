@@ -2,13 +2,8 @@
 name: TypeScript Animated Component
 ---
 
-````tsx
----
-name: JavaScript Animated Component
----
-
-```jsx
-import { motion, useAnimation,Variants } from "framer-motion";
+```tsx
+import { motion, useAnimation, Variants } from "framer-motion";
 import { useState } from "react";
 
 // svg's paths
@@ -22,7 +17,7 @@ const paths = [
 ];
 
 // default text ("Upload") variants
-const defaultTextVariants : Variants = {
+const defaultTextVariants: Variants = {
   hidden: {
     scale: 0.2,
     opacity: 0,
@@ -35,7 +30,7 @@ const defaultTextVariants : Variants = {
   },
 };
 
-const defaultTextContainer : Variants = {
+const defaultTextContainer: Variants = {
   hidden: {
     transition: { staggerChildren: 0.075, staggerDirection: -1 },
   },
@@ -45,7 +40,7 @@ const defaultTextContainer : Variants = {
 };
 
 // dots loader variants
-const dotsVariants : Variants= {
+const dotsVariants: Variants = {
   hidden: {
     scale: 0,
     opacity: 0,
@@ -64,7 +59,7 @@ const dotsVariants : Variants= {
   },
 };
 
-const dotsContainerVariants : Variants = {
+const dotsContainerVariants: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.075,
@@ -79,7 +74,7 @@ const dotsContainerVariants : Variants = {
 };
 
 // success text variants
-const successTextVariants : Variants = {
+const successTextVariants: Variants = {
   hidden: {
     opacity: 0,
     scale: 0,
@@ -94,7 +89,7 @@ const successTextVariants : Variants = {
   },
 };
 
-const successContainer : Variants = {
+const successContainer: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.075,
@@ -109,7 +104,7 @@ const successContainer : Variants = {
   },
 };
 
-const successTickVariants : Variants = {
+const successTickVariants: Variants = {
   hidden: {
     pathLength: 0,
     transition: {
@@ -126,7 +121,7 @@ const successTickVariants : Variants = {
 };
 
 // button variants
-const buttonVariants : Variants = {
+const buttonVariants: Variants = {
   end: {
     scale: 1.05,
     transition: {
@@ -271,8 +266,4 @@ function DownloadButton() {
 }
 
 export default DownloadButton;
-````
-
-```
-
 ```
