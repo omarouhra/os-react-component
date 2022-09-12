@@ -96,6 +96,7 @@ type Props = {
 
 - [Omar Ouhra](https://twitter.com/OuhraOmar)
 - [Imad Atyat Allah](https://twitter.com/ImadAtyat)
+- [Jamal Id Aissa](https://github.com/ID-JA)
 - Next contributor name ...
 
 <p align="center">
