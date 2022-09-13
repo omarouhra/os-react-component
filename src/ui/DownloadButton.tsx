@@ -126,15 +126,6 @@ const buttonVariants: Variants = {
   },
 };
 
-const buttonClassNames =
-  "relative w-32 text-center text-base font-semibold drop-shadow [transform:translateZ(0)]";
-
-const dotsContainerClassNames =
-  "absolute top-5 bottom-5 left-0 right-0 z-10 flex items-center justify-center";
-
-const dotsClassNames =
-  "mx-1 my-0 block h-[6px] w-[6px] translate-y-[6px] scale-0 transform rounded-md bg-white opacity-0";
-
 function DownloadButton() {
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -166,7 +157,7 @@ function DownloadButton() {
   return (
     <div className='flex h-full flex-col items-center justify-center space-y-4 '>
       <motion.button
-        className={buttonClassNames}
+        className='relative w-32 text-center text-base font-semibold drop-shadow [transform:translateZ(0)]'
         onClick={() => !isAnimating && animate()}
         variants={buttonVariants}
         animate={buttonControls}
@@ -177,7 +168,7 @@ function DownloadButton() {
             variants={defaultTextContainer}
             animate={defaultTextControls}
           >
-            {Array.from("Upload").map((letter, index) => (
+            {Array.from("Download").map((letter, index) => (
               <motion.span
                 key={`letter-${letter}-${index}`}
                 className='inline-block origin-center align-top'
@@ -219,7 +210,7 @@ function DownloadButton() {
           </motion.div>
         </motion.div>
         <motion.div
-          className={dotsContainerClassNames}
+          className='absolute top-5 bottom-5 left-0 right-0 z-10 flex items-center justify-center'
           animate={loadingControls}
           variants={dotsContainerVariants}
         >
@@ -227,7 +218,7 @@ function DownloadButton() {
             return (
               <motion.span
                 key={`dot-${index}`}
-                className={dotsClassNames}
+                className='mx-1 my-0 block h-[6px] w-[6px] translate-y-[6px] scale-0 transform rounded-md bg-white opacity-0'
                 variants={dotsVariants}
               />
             );
