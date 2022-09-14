@@ -38,6 +38,11 @@ function GridComponents() {
       link: "/loader",
       gradient: "from-[#a575d1] to-[#10d5eb]",
     },
+    {
+      lable: "Download Button ",
+      link: "/download-button",
+      gradient: "from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]",
+    },
   ];
 
   const container = {

@@ -1,4 +1,5 @@
 // Components
+import DownloadButton from "@/ui/DownloadButton";
 import GridComponents from "@/ui/GridComponents";
 import HeroTitle from "@/ui/HeroTitle";
 import { CircleLoader, DotsLoader } from "@/ui/Loader";
@@ -35,6 +36,8 @@ const MDXComponents = {
   //Loaders
   CircleLoader,
   DotsLoader,
+
+  DownloadButton,
 };
 
 export default MDXComponents;
